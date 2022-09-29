@@ -30,5 +30,12 @@ namespace AutoFact
             this.Hide();
             ClientA.Show();
         }
+
+        private void modificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClientM ClientM = new FormClientM();
+            this.Hide();
+            ClientM.Show();
+        }
     }
 }

@@ -1,16 +1,17 @@
-﻿namespace AutoFact
+﻿
+namespace AutoFact
 {
-    partial class FormClientM
+    partial class FormMenu
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variable nécessaire au concepteur.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Nettoyage des ressources utilisées.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +21,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Code généré par le Concepteur Windows Form
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+        /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
         private void InitializeComponent()
         {
@@ -64,7 +65,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 0;
             // 
             // menuToolStripMenuItem
             // 
@@ -106,20 +107,23 @@
             // visualisationToolStripMenuItem
             // 
             this.visualisationToolStripMenuItem.Name = "visualisationToolStripMenuItem";
-            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.visualisationToolStripMenuItem.Text = "Visualisation";
+            this.visualisationToolStripMenuItem.Click += new System.EventHandler(this.visualisationToolStripMenuItem_Click);
             // 
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
+            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
             // prestationToolStripMenuItem
             // 
@@ -205,13 +209,14 @@
             this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.profitToolStripMenuItem.Text = "Profit";
             // 
-            // FormClientM
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "FormClientM";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "FormMenu";
             this.Text = "AutoFact";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -224,9 +229,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
@@ -243,5 +245,9 @@
         private System.Windows.Forms.ToolStripMenuItem chiffreDaffaireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comptableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
     }
 }
+

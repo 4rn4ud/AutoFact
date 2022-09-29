@@ -1,6 +1,6 @@
 ﻿namespace AutoFact
 {
-    partial class FormClientV
+    partial class FormClientM
     {
         /// <summary>
         /// Required designer variable.
@@ -64,13 +64,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.TabIndex = 2;
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "&Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // profilToolStripMenuItem
             // 
@@ -205,13 +206,13 @@
             this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.profitToolStripMenuItem.Text = "Profit";
             // 
-            // FormClient
+            // FormClientM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "FormClient";
+            this.Name = "FormClientM";
             this.Text = "AutoFact";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace AutoFact
 {
-    public partial class FormClientA : Form
+    public partial class FormClientV : Form
     {
-        public FormClientA()
+        public FormClientV()
         {
             InitializeComponent();
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMenu Menu = new FormMenu();
+            this.Hide();
+            Menu.Show();
         }
     }
 }

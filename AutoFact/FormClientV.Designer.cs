@@ -1,17 +1,16 @@
-﻿
-namespace AutoFact
+﻿namespace AutoFact
 {
-    partial class FormMenu
+    partial class FormClientV
     {
         /// <summary>
-        /// Variable nécessaire au concepteur.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Nettoyage des ressources utilisées.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +20,11 @@ namespace AutoFact
             base.Dispose(disposing);
         }
 
-        #region Code généré par le Concepteur Windows Form
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -65,13 +64,14 @@ namespace AutoFact
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "&Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // profilToolStripMenuItem
             // 
@@ -107,21 +107,19 @@ namespace AutoFact
             // visualisationToolStripMenuItem
             // 
             this.visualisationToolStripMenuItem.Name = "visualisationToolStripMenuItem";
-            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.visualisationToolStripMenuItem.Text = "Visualisation";
-            this.visualisationToolStripMenuItem.Click += new System.EventHandler(this.visualisationToolStripMenuItem_Click);
             // 
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
-            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
             // 
             // prestationToolStripMenuItem
@@ -208,14 +206,13 @@ namespace AutoFact
             this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.profitToolStripMenuItem.Text = "Profit";
             // 
-            // FormMenu
+            // FormClientV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormMenu";
+            this.Name = "FormClientV";
             this.Text = "AutoFact";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -228,6 +225,9 @@ namespace AutoFact
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
@@ -244,9 +244,5 @@ namespace AutoFact
         private System.Windows.Forms.ToolStripMenuItem chiffreDaffaireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comptableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
     }
 }
-
