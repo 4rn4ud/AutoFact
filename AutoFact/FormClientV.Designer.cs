@@ -85,13 +85,13 @@
             // visualisationToolStripMenuItem3
             // 
             this.visualisationToolStripMenuItem3.Name = "visualisationToolStripMenuItem3";
-            this.visualisationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
+            this.visualisationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.visualisationToolStripMenuItem3.Text = "Visualisation";
             // 
             // modificationToolStripMenuItem3
             // 
             this.modificationToolStripMenuItem3.Name = "modificationToolStripMenuItem3";
-            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
+            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.modificationToolStripMenuItem3.Text = "Modification";
             // 
             // clientToolStripMenuItem
@@ -213,6 +213,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormClientV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

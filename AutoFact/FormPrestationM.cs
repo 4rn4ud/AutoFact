@@ -16,5 +16,12 @@ namespace AutoFact
         {
             InitializeComponent();
         }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMenu Menu = new FormMenu();
+            this.Hide();
+            Menu.Show();
+        }
     }
 }
