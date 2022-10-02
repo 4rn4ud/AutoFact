@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace AutoFact
 {
     static class Program
@@ -14,9 +17,17 @@ namespace AutoFact
         [STAThread]
         static void Main()
         {
+           // var db = new MyContext();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMenu());
         }
-    }
+
+        
+
+    };
+   
+
+
 }
