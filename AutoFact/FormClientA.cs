@@ -37,9 +37,10 @@ namespace AutoFact
                     //name texte As String = Me.TxtClientName.Text;
 
                     string lenom = this.TxtClientName.Text; 
-                    Console.WriteLine(lenom);
 
-                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES('Ming', 'nomdefamille', 'nomentreprise', 78224, 'adresse', 'laville', 'lemail', 'letel')";
+
+                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES(@Nom, 'nomdefamille', 'nomentreprise', 78224, 'adresse', 'laville', 'lemail', 'letel')";
+                    cmd.Parameters.AddWithValue("@Nom", lenom);
                         cmd.CommandText = strSql;
                         cmd.Connection = conn;
                         conn.Open();
