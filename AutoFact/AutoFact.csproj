@@ -158,6 +158,7 @@
     <Compile Include="FormProfilV.Designer.cs">
       <DependentUpon>FormProfilV.cs</DependentUpon>
     </Compile>
+    <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test_papap.cs" />
