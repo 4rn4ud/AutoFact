@@ -50,7 +50,6 @@ namespace AutoFact
                     string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES(@Nom, @nomfamille, @nomentreprise, @codepostal, @adresse, @ville, @mail, @tel)";
 
                     cmd.Parameters.AddWithValue("@Nom", lenom);
-
                     cmd.Parameters.AddWithValue("@nomfamille", lenomdefamille);
                     cmd.Parameters.AddWithValue("@nomentreprise", lenomentreprise);
                     cmd.Parameters.AddWithValue("@codepostal", lecodepostal);
