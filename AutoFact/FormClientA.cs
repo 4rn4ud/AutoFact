@@ -30,7 +30,7 @@ namespace AutoFact
 
         private void WriteSQLite()
         {
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = C:\\Users\\clapier\\Documents\\GitHub\\AutoFact\\AutoFact\\bin\\Debug\\mydatabase.db"))
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db"))
             {
                 using (SQLiteCommand cmd = new SQLiteCommand())
                 {
