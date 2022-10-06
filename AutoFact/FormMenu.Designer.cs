@@ -50,7 +50,10 @@ namespace AutoFact
             this.chiffreDaffaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,21 +110,21 @@ namespace AutoFact
             // visualisationToolStripMenuItem
             // 
             this.visualisationToolStripMenuItem.Name = "visualisationToolStripMenuItem";
-            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.visualisationToolStripMenuItem.Text = "Visualisation";
             this.visualisationToolStripMenuItem.Click += new System.EventHandler(this.visualisationToolStripMenuItem_Click);
             // 
             // ajoutToolStripMenuItem
             // 
             this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.ajoutToolStripMenuItem.Text = "Ajout";
             this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
             // 
             // modificationToolStripMenuItem
             // 
             this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem.Text = "Modification";
             this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
             // 
@@ -209,11 +212,31 @@ namespace AutoFact
             this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.profitToolStripMenuItem.Text = "Profit";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AutoFact.Properties.Resources.logo1;
+            this.pictureBox1.Location = new System.Drawing.Point(251, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 248);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(277, 330);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Bienvenue, sur votre logiciel préféré.";
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenu";
@@ -221,6 +244,7 @@ namespace AutoFact
             this.Text = "AutoFact";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,6 +273,8 @@ namespace AutoFact
         private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
