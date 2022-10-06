@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoFact
 {
-    public class Product
+    class Product
     {
         private int id;
         private string libel;
@@ -34,7 +32,7 @@ namespace AutoFact
         }
         public void setLibel(string onelibel)
         {
-            this.libel = onelibel;
+            this.libel = onelibel.Trim();
         }
         public int getUnitprice()
         {
