@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Diagnostics;
 //using System.Windows.Forms;
 
 
@@ -27,36 +28,56 @@ namespace AutoFact
             Menu.Show();
         }
 
-        private  void WriteSQLite()
+        private void WriteSQLite()
         {
-                using (SQLiteConnection conn = new SQLiteConnection("DataSource = C:\\Users\\Titouan\\Documents\\GitHub\\AutoFact\\AutoFact\\bin\\Debug/mydatabase.db"))
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
                 {
-                    using (SQLiteCommand cmd = new SQLiteCommand())
-                    {
-
-                    //name texte As String = Me.TxtClientName.Text;
-
-                    string lenom = this.TxtClientName.Text; 
 
 
-                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES(@Nom, 'nomdefamille', 'nomentreprise', 78224, 'adresse', 'laville', 'lemail', 'letel')";
+
+                    string lenom = this.TxtClientName.Text;
+                    string lenomdefamille = this.TxtClientLastName.Text;
+                    string lenomentreprise = this.TxtClientCompany.Text;
+                    string lecodepostal = this.TxtClientPostal.Text;
+                    string uneadresse = this.TxtClientAdress.Text;
+                    string laville = this.TxtClientCity.Text;
+                    string lemail = this.TxtClientMail.Text;
+                    string letel = this.TxtClientTel.Text;
+
+
+                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES(@Nom, @nomfamille, @nomentreprise, @codepostal, @adresse, @ville, @mail, @tel)";
+
                     cmd.Parameters.AddWithValue("@Nom", lenom);
-                        cmd.CommandText = strSql;
-                        cmd.Connection = conn;
-                        conn.Open();
 
-                        cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@nomfamille", lenomdefamille);
+                    cmd.Parameters.AddWithValue("@nomentreprise", lenomentreprise);
+                    cmd.Parameters.AddWithValue("@codepostal", lecodepostal);
+                    cmd.Parameters.AddWithValue("@adresse", uneadresse);
+                    cmd.Parameters.AddWithValue("@ville", laville);
+                    cmd.Parameters.AddWithValue("@mail", lemail);
+                    cmd.Parameters.AddWithValue("@tel", letel);
 
-                        // do something…
 
-                        conn.Close();
-                    }
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    conn.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    // do something…
+
+                    conn.Close();
                 }
+            }
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             WriteSQLite();
-            
+
         }
     }
 }
