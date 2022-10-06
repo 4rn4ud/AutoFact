@@ -16,7 +16,7 @@ namespace AutoFact
         public Type(int theid, string thelibel)
         {
             this.id = theid;
-            this.libel = thelibel;
+            this.libel = thelibel.Trim();
         }
         public int getId()
         {
