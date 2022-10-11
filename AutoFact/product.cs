@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace AutoFact
 {
 
-    //public class Product
 
     class Product
 
