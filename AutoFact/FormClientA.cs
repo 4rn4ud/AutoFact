@@ -30,47 +30,7 @@ namespace AutoFact
 
         private void WriteSQLite()
         {
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db"))
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand())
-                {
-
-
-
-                    string lenom = this.TxtClientName.Text;
-                    string lenomdefamille = this.TxtClientLastName.Text;
-                    string lenomentreprise = this.TxtClientCompany.Text;
-                    string lecodepostal = this.TxtClientPostal.Text;
-                    string uneadresse = this.TxtClientAdress.Text;
-                    string laville = this.TxtClientCity.Text;
-                    string lemail = this.TxtClientMail.Text;
-                    string letel = this.TxtClientTel.Text;
-
-
-                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) VALUES(@Nom, @nomfamille, @nomentreprise, @codepostal, @adresse, @ville, @mail, @tel)";
-
-                    cmd.Parameters.AddWithValue("@Nom", lenom);
-
-                    cmd.Parameters.AddWithValue("@nomfamille", lenomdefamille);
-                    cmd.Parameters.AddWithValue("@nomentreprise", lenomentreprise);
-                    cmd.Parameters.AddWithValue("@codepostal", lecodepostal);
-                    cmd.Parameters.AddWithValue("@adresse", uneadresse);
-                    cmd.Parameters.AddWithValue("@ville", laville);
-                    cmd.Parameters.AddWithValue("@mail", lemail);
-                    cmd.Parameters.AddWithValue("@tel", letel);
-
-
-                    cmd.CommandText = strSql;
-                    cmd.Connection = conn;
-                    conn.Open();
-
-                    cmd.ExecuteNonQuery();
-
-                    // do something…
-
-                    conn.Close();
-                }
-            }
+            
         }
 
 
@@ -79,5 +39,12 @@ namespace AutoFact
             WriteSQLite();
 
         }
+
+        private void FormClientA_Load(object sender, EventArgs e)
+        { 
+
+        
+        }
+            
     }
 }

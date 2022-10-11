@@ -49,7 +49,9 @@
             this.chiffreDaffaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewCustomers = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,7 +65,7 @@
             this.chiffreDaffaireToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1484, 24);
             this.menuStrip1.TabIndex = 1;
             // 
             // menuToolStripMenuItem
@@ -85,13 +87,13 @@
             // visualisationToolStripMenuItem3
             // 
             this.visualisationToolStripMenuItem3.Name = "visualisationToolStripMenuItem3";
-            this.visualisationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.visualisationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
             this.visualisationToolStripMenuItem3.Text = "Visualisation";
             // 
             // modificationToolStripMenuItem3
             // 
             this.modificationToolStripMenuItem3.Name = "modificationToolStripMenuItem3";
-            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
             this.modificationToolStripMenuItem3.Text = "Modification";
             // 
             // clientToolStripMenuItem
@@ -206,17 +208,29 @@
             this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.profitToolStripMenuItem.Text = "Profit";
             // 
+            // dataGridViewCustomers
+            // 
+            this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(341, 299);
+            this.dataGridViewCustomers.Name = "dataGridViewCustomers";
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(788, 150);
+            this.dataGridViewCustomers.TabIndex = 2;
+            this.dataGridViewCustomers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // FormClientV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1484, 1421);
+            this.Controls.Add(this.dataGridViewCustomers);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormClientV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.FormClientV_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +259,6 @@
         private System.Windows.Forms.ToolStripMenuItem chiffreDaffaireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comptableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profitToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridViewCustomers;
     }
 }

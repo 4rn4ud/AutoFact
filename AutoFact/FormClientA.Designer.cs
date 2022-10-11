@@ -82,7 +82,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
             this.menuStrip1.TabIndex = 2;
             // 
             // menuToolStripMenuItem
@@ -227,7 +227,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 349);
+            this.button1.Location = new System.Drawing.Point(517, 373);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
@@ -238,7 +238,7 @@
             // 
             // TxtClientAdress
             // 
-            this.TxtClientAdress.Location = new System.Drawing.Point(467, 106);
+            this.TxtClientAdress.Location = new System.Drawing.Point(455, 130);
             this.TxtClientAdress.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientAdress.Name = "TxtClientAdress";
             this.TxtClientAdress.Size = new System.Drawing.Size(76, 20);
@@ -246,7 +246,7 @@
             // 
             // TxtClientCity
             // 
-            this.TxtClientCity.Location = new System.Drawing.Point(467, 166);
+            this.TxtClientCity.Location = new System.Drawing.Point(455, 190);
             this.TxtClientCity.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientCity.Name = "TxtClientCity";
             this.TxtClientCity.Size = new System.Drawing.Size(76, 20);
@@ -254,7 +254,7 @@
             // 
             // TxtClientName
             // 
-            this.TxtClientName.Location = new System.Drawing.Point(220, 106);
+            this.TxtClientName.Location = new System.Drawing.Point(208, 130);
             this.TxtClientName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientName.Name = "TxtClientName";
             this.TxtClientName.Size = new System.Drawing.Size(76, 20);
@@ -262,7 +262,7 @@
             // 
             // TxtClientLastName
             // 
-            this.TxtClientLastName.Location = new System.Drawing.Point(220, 166);
+            this.TxtClientLastName.Location = new System.Drawing.Point(208, 190);
             this.TxtClientLastName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientLastName.Name = "TxtClientLastName";
             this.TxtClientLastName.Size = new System.Drawing.Size(76, 20);
@@ -270,7 +270,7 @@
             // 
             // TxtClientCompany
             // 
-            this.TxtClientCompany.Location = new System.Drawing.Point(220, 224);
+            this.TxtClientCompany.Location = new System.Drawing.Point(208, 248);
             this.TxtClientCompany.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientCompany.Name = "TxtClientCompany";
             this.TxtClientCompany.Size = new System.Drawing.Size(76, 20);
@@ -278,7 +278,7 @@
             // 
             // TxtClientPostal
             // 
-            this.TxtClientPostal.Location = new System.Drawing.Point(220, 286);
+            this.TxtClientPostal.Location = new System.Drawing.Point(208, 310);
             this.TxtClientPostal.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientPostal.Name = "TxtClientPostal";
             this.TxtClientPostal.Size = new System.Drawing.Size(76, 20);
@@ -286,7 +286,7 @@
             // 
             // TxtClientTel
             // 
-            this.TxtClientTel.Location = new System.Drawing.Point(467, 286);
+            this.TxtClientTel.Location = new System.Drawing.Point(455, 310);
             this.TxtClientTel.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientTel.Name = "TxtClientTel";
             this.TxtClientTel.Size = new System.Drawing.Size(76, 20);
@@ -294,7 +294,7 @@
             // 
             // TxtClientMail
             // 
-            this.TxtClientMail.Location = new System.Drawing.Point(467, 224);
+            this.TxtClientMail.Location = new System.Drawing.Point(455, 248);
             this.TxtClientMail.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientMail.Name = "TxtClientMail";
             this.TxtClientMail.Size = new System.Drawing.Size(76, 20);
@@ -303,7 +303,7 @@
             // lastname
             // 
             this.lastname.AutoSize = true;
-            this.lastname.Location = new System.Drawing.Point(109, 169);
+            this.lastname.Location = new System.Drawing.Point(97, 193);
             this.lastname.Name = "lastname";
             this.lastname.Size = new System.Drawing.Size(32, 13);
             this.lastname.TabIndex = 12;
@@ -312,7 +312,7 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(109, 109);
+            this.name.Location = new System.Drawing.Point(97, 133);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(46, 13);
             this.name.TabIndex = 13;
@@ -321,7 +321,7 @@
             // companyname
             // 
             this.companyname.AutoSize = true;
-            this.companyname.Location = new System.Drawing.Point(109, 227);
+            this.companyname.Location = new System.Drawing.Point(97, 251);
             this.companyname.Name = "companyname";
             this.companyname.Size = new System.Drawing.Size(78, 13);
             this.companyname.TabIndex = 14;
@@ -330,7 +330,7 @@
             // postalcode
             // 
             this.postalcode.AutoSize = true;
-            this.postalcode.Location = new System.Drawing.Point(109, 289);
+            this.postalcode.Location = new System.Drawing.Point(97, 313);
             this.postalcode.Name = "postalcode";
             this.postalcode.Size = new System.Drawing.Size(67, 13);
             this.postalcode.TabIndex = 15;
@@ -339,7 +339,7 @@
             // adress
             // 
             this.adress.AutoSize = true;
-            this.adress.Location = new System.Drawing.Point(329, 109);
+            this.adress.Location = new System.Drawing.Point(317, 133);
             this.adress.Name = "adress";
             this.adress.Size = new System.Drawing.Size(48, 13);
             this.adress.TabIndex = 16;
@@ -348,7 +348,7 @@
             // city
             // 
             this.city.AutoSize = true;
-            this.city.Location = new System.Drawing.Point(329, 169);
+            this.city.Location = new System.Drawing.Point(317, 193);
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(27, 13);
             this.city.TabIndex = 17;
@@ -357,7 +357,7 @@
             // mail
             // 
             this.mail.AutoSize = true;
-            this.mail.Location = new System.Drawing.Point(329, 227);
+            this.mail.Location = new System.Drawing.Point(317, 251);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(29, 13);
             this.mail.TabIndex = 18;
@@ -366,7 +366,7 @@
             // tel
             // 
             this.tel.AutoSize = true;
-            this.tel.Location = new System.Drawing.Point(329, 293);
+            this.tel.Location = new System.Drawing.Point(317, 317);
             this.tel.Name = "tel";
             this.tel.Size = new System.Drawing.Size(61, 13);
             this.tel.TabIndex = 19;
@@ -376,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.Controls.Add(this.tel);
             this.Controls.Add(this.mail);
             this.Controls.Add(this.city);
@@ -398,6 +398,7 @@
             this.Name = "FormClientA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.FormClientA_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
