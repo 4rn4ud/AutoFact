@@ -254,7 +254,7 @@
             // 
             // TxtClientName
             // 
-            this.TxtClientName.Location = new System.Drawing.Point(220, 166);
+            this.TxtClientName.Location = new System.Drawing.Point(220, 106);
             this.TxtClientName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientName.Name = "TxtClientName";
             this.TxtClientName.Size = new System.Drawing.Size(76, 20);
@@ -262,7 +262,7 @@
             // 
             // TxtClientLastName
             // 
-            this.TxtClientLastName.Location = new System.Drawing.Point(220, 106);
+            this.TxtClientLastName.Location = new System.Drawing.Point(220, 166);
             this.TxtClientLastName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientLastName.Name = "TxtClientLastName";
             this.TxtClientLastName.Size = new System.Drawing.Size(76, 20);
