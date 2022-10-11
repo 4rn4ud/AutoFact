@@ -58,14 +58,14 @@
             this.TxtClientPostal = new System.Windows.Forms.TextBox();
             this.TxtClientTel = new System.Windows.Forms.TextBox();
             this.TxtClientMail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lastname = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.companyname = new System.Windows.Forms.Label();
+            this.postalcode = new System.Windows.Forms.Label();
+            this.adress = new System.Windows.Forms.Label();
+            this.city = new System.Windows.Forms.Label();
+            this.mail = new System.Windows.Forms.Label();
+            this.tel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,7 +238,7 @@
             // 
             // TxtClientAdress
             // 
-            this.TxtClientAdress.Location = new System.Drawing.Point(220, 286);
+            this.TxtClientAdress.Location = new System.Drawing.Point(467, 106);
             this.TxtClientAdress.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientAdress.Name = "TxtClientAdress";
             this.TxtClientAdress.Size = new System.Drawing.Size(76, 20);
@@ -246,7 +246,7 @@
             // 
             // TxtClientCity
             // 
-            this.TxtClientCity.Location = new System.Drawing.Point(220, 166);
+            this.TxtClientCity.Location = new System.Drawing.Point(467, 166);
             this.TxtClientCity.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientCity.Name = "TxtClientCity";
             this.TxtClientCity.Size = new System.Drawing.Size(76, 20);
@@ -254,7 +254,7 @@
             // 
             // TxtClientName
             // 
-            this.TxtClientName.Location = new System.Drawing.Point(467, 224);
+            this.TxtClientName.Location = new System.Drawing.Point(220, 166);
             this.TxtClientName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientName.Name = "TxtClientName";
             this.TxtClientName.Size = new System.Drawing.Size(76, 20);
@@ -270,7 +270,7 @@
             // 
             // TxtClientCompany
             // 
-            this.TxtClientCompany.Location = new System.Drawing.Point(467, 286);
+            this.TxtClientCompany.Location = new System.Drawing.Point(220, 224);
             this.TxtClientCompany.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientCompany.Name = "TxtClientCompany";
             this.TxtClientCompany.Size = new System.Drawing.Size(76, 20);
@@ -278,7 +278,7 @@
             // 
             // TxtClientPostal
             // 
-            this.TxtClientPostal.Location = new System.Drawing.Point(467, 106);
+            this.TxtClientPostal.Location = new System.Drawing.Point(220, 286);
             this.TxtClientPostal.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientPostal.Name = "TxtClientPostal";
             this.TxtClientPostal.Size = new System.Drawing.Size(76, 20);
@@ -286,7 +286,7 @@
             // 
             // TxtClientTel
             // 
-            this.TxtClientTel.Location = new System.Drawing.Point(467, 166);
+            this.TxtClientTel.Location = new System.Drawing.Point(467, 286);
             this.TxtClientTel.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientTel.Name = "TxtClientTel";
             this.TxtClientTel.Size = new System.Drawing.Size(76, 20);
@@ -294,97 +294,97 @@
             // 
             // TxtClientMail
             // 
-            this.TxtClientMail.Location = new System.Drawing.Point(220, 224);
+            this.TxtClientMail.Location = new System.Drawing.Point(467, 224);
             this.TxtClientMail.Margin = new System.Windows.Forms.Padding(2);
             this.TxtClientMail.Name = "TxtClientMail";
             this.TxtClientMail.Size = new System.Drawing.Size(76, 20);
             this.TxtClientMail.TabIndex = 11;
             // 
-            // label1
+            // lastname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.lastname.AutoSize = true;
+            this.lastname.Location = new System.Drawing.Point(109, 169);
+            this.lastname.Name = "lastname";
+            this.lastname.Size = new System.Drawing.Size(32, 13);
+            this.lastname.TabIndex = 12;
+            this.lastname.Text = "Nom:";
             // 
-            // label2
+            // name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(109, 109);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(46, 13);
+            this.name.TabIndex = 13;
+            this.name.Text = "Prénom:";
             // 
-            // label3
+            // companyname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(103, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "label3";
+            this.companyname.AutoSize = true;
+            this.companyname.Location = new System.Drawing.Point(109, 227);
+            this.companyname.Name = "companyname";
+            this.companyname.Size = new System.Drawing.Size(78, 13);
+            this.companyname.TabIndex = 14;
+            this.companyname.Text = "RaisonSociale:";
             // 
-            // label4
+            // postalcode
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 293);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "label4";
+            this.postalcode.AutoSize = true;
+            this.postalcode.Location = new System.Drawing.Point(109, 289);
+            this.postalcode.Name = "postalcode";
+            this.postalcode.Size = new System.Drawing.Size(67, 13);
+            this.postalcode.TabIndex = 15;
+            this.postalcode.Text = "Code Postal:";
             // 
-            // label5
+            // adress
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(329, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "label5";
+            this.adress.AutoSize = true;
+            this.adress.Location = new System.Drawing.Point(329, 109);
+            this.adress.Name = "adress";
+            this.adress.Size = new System.Drawing.Size(48, 13);
+            this.adress.TabIndex = 16;
+            this.adress.Text = "Adresse:";
             // 
-            // label6
+            // city
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(329, 169);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "label6";
+            this.city.AutoSize = true;
+            this.city.Location = new System.Drawing.Point(329, 169);
+            this.city.Name = "city";
+            this.city.Size = new System.Drawing.Size(27, 13);
+            this.city.TabIndex = 17;
+            this.city.Text = "Vile:";
             // 
-            // label7
+            // mail
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(329, 227);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "label7";
+            this.mail.AutoSize = true;
+            this.mail.Location = new System.Drawing.Point(329, 227);
+            this.mail.Name = "mail";
+            this.mail.Size = new System.Drawing.Size(29, 13);
+            this.mail.TabIndex = 18;
+            this.mail.Text = "Mail:";
             // 
-            // label8
+            // tel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(329, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Téléphone:";
+            this.tel.AutoSize = true;
+            this.tel.Location = new System.Drawing.Point(329, 293);
+            this.tel.Name = "tel";
+            this.tel.Size = new System.Drawing.Size(61, 13);
+            this.tel.TabIndex = 19;
+            this.tel.Text = "Téléphone:";
             // 
             // FormClientA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tel);
+            this.Controls.Add(this.mail);
+            this.Controls.Add(this.city);
+            this.Controls.Add(this.adress);
+            this.Controls.Add(this.postalcode);
+            this.Controls.Add(this.companyname);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.lastname);
             this.Controls.Add(this.TxtClientMail);
             this.Controls.Add(this.TxtClientTel);
             this.Controls.Add(this.TxtClientPostal);
@@ -437,13 +437,13 @@
         private System.Windows.Forms.TextBox TxtClientPostal;
         private System.Windows.Forms.TextBox TxtClientTel;
         private System.Windows.Forms.TextBox TxtClientMail;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lastname;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label companyname;
+        private System.Windows.Forms.Label postalcode;
+        private System.Windows.Forms.Label adress;
+        private System.Windows.Forms.Label city;
+        private System.Windows.Forms.Label mail;
+        private System.Windows.Forms.Label tel;
     }
 }
