@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
+=======
+using System.Linq;
+>>>>>>> Fatih
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoFact
 {
+<<<<<<< HEAD
     public class Product
+=======
+    class Product
+>>>>>>> Fatih
     {
         private int id;
         private string libel;
@@ -34,7 +42,11 @@ namespace AutoFact
         }
         public void setLibel(string onelibel)
         {
+<<<<<<< HEAD
             this.libel = onelibel;
+=======
+            this.libel = onelibel.Trim();
+>>>>>>> Fatih
         }
         public int getUnitprice()
         {

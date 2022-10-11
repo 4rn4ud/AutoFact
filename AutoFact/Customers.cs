@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-    public class Customers
+     class Customers
     {
         private int id;
         private string name;
@@ -43,7 +43,7 @@ namespace AutoFact
         }
         public void setName(string onename)
         {
-            this.name = onename;
+            this.name = onename.Trim();
         }
         public string getLastname()
         {
@@ -51,7 +51,7 @@ namespace AutoFact
         }
         public void setLastname(string onelastname)
         {
-            this.name = onelastname;
+            this.name = onelastname.Trim();
         }
         public string getcompanyname()
         {
@@ -59,7 +59,7 @@ namespace AutoFact
         }
         public void setlastname(string onecompanyname)
         {
-            this.companyname = onecompanyname;
+            this.companyname = onecompanyname.Trim();
         }
         public int getPostalcode()
         {
@@ -75,7 +75,7 @@ namespace AutoFact
         }
         public void setAdress(string oneadress)
         {
-            this.adress = oneadress;
+            this.adress = oneadress.Trim();
         }
         public string getCity()
         {
@@ -83,7 +83,7 @@ namespace AutoFact
         }
         public void setCity(string onecity)
         {
-            this.city = onecity;
+            this.city = onecity.Trim();
         }
         public int getTel()
         {
