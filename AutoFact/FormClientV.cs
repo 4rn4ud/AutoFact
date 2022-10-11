@@ -8,11 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AutoFact
 {
     public partial class FormClientV : Form
     {
+        SqlDataAdapter sda;
+        SqlCommandBuilder scb;
+        DataTable dt;
+        
         public FormClientV()
         {
             InitializeComponent();
@@ -32,7 +37,7 @@ namespace AutoFact
 
         private void FormClientV_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
     }
