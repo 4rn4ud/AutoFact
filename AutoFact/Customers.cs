@@ -99,6 +99,14 @@ namespace AutoFact
         {
             
         }
+        public string getMail()
+        {
+            return this.mail;
+        }
+        public void setMail(string onemail)
+        {
+            this.mail = onemail.Trim();
+        }
 
 
     }

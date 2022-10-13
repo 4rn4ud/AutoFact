@@ -30,223 +30,199 @@ namespace AutoFact
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualisationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualisationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.suppressionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualisationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajoutToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.chiffreDaffaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comptableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.profitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
+            this.BtnProfVisua = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnProfModif = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnModClient = new System.Windows.Forms.Button();
+            this.BtnAjtClient = new System.Windows.Forms.Button();
+            this.BtnAffProd = new System.Windows.Forms.Button();
+            this.BtnModifProd = new System.Windows.Forms.Button();
+            this.BtnAffDoc = new System.Windows.Forms.Button();
+            this.BtnModDoc = new System.Windows.Forms.Button();
+            this.BtnAjtProd = new System.Windows.Forms.Button();
+            this.BtnAjtDoc = new System.Windows.Forms.Button();
+            this.BtnVisuProf = new System.Windows.Forms.Button();
+            this.BtnModifProf = new System.Windows.Forms.Button();
+            this.BtnInformation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
-            this.profilToolStripMenuItem,
-            this.clientToolStripMenuItem,
-            this.prestationToolStripMenuItem,
-            this.devisToolStripMenuItem,
-            this.chiffreDaffaireToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "&Menu";
-            // 
-            // profilToolStripMenuItem
-            // 
-            this.profilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualisationToolStripMenuItem3,
-            this.modificationToolStripMenuItem3});
-            this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.profilToolStripMenuItem.Text = "&Profil";
-            // 
-            // visualisationToolStripMenuItem3
-            // 
-            this.visualisationToolStripMenuItem3.Name = "visualisationToolStripMenuItem3";
-            this.visualisationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
-            this.visualisationToolStripMenuItem3.Text = "Visualisation";
-            // 
-            // modificationToolStripMenuItem3
-            // 
-            this.modificationToolStripMenuItem3.Name = "modificationToolStripMenuItem3";
-            this.modificationToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
-            this.modificationToolStripMenuItem3.Text = "Modification";
-            // 
-            // clientToolStripMenuItem
-            // 
-            this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualisationToolStripMenuItem,
-            this.ajoutToolStripMenuItem,
-            this.modificationToolStripMenuItem});
-            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.clientToolStripMenuItem.Text = "&Client";
-            // 
-            // visualisationToolStripMenuItem
-            // 
-            this.visualisationToolStripMenuItem.Name = "visualisationToolStripMenuItem";
-            this.visualisationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.visualisationToolStripMenuItem.Text = "Visualisation";
-            this.visualisationToolStripMenuItem.Click += new System.EventHandler(this.visualisationToolStripMenuItem_Click);
-            // 
-            // ajoutToolStripMenuItem
-            // 
-            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
-            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.ajoutToolStripMenuItem.Text = "Ajout";
-            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
-            // 
-            // modificationToolStripMenuItem
-            // 
-            this.modificationToolStripMenuItem.Name = "modificationToolStripMenuItem";
-            this.modificationToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.modificationToolStripMenuItem.Text = "Modification";
-            this.modificationToolStripMenuItem.Click += new System.EventHandler(this.modificationToolStripMenuItem_Click);
-            // 
-            // prestationToolStripMenuItem
-            // 
-            this.prestationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualisationToolStripMenuItem1,
-            this.ajoutToolStripMenuItem1,
-            this.modificationToolStripMenuItem1,
-            this.suppressionToolStripMenuItem});
-            this.prestationToolStripMenuItem.Name = "prestationToolStripMenuItem";
-            this.prestationToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.prestationToolStripMenuItem.Text = "&Prestation";
-            // 
-            // visualisationToolStripMenuItem1
-            // 
-            this.visualisationToolStripMenuItem1.Name = "visualisationToolStripMenuItem1";
-            this.visualisationToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
-            this.visualisationToolStripMenuItem1.Text = "Visualisation";
-            // 
-            // ajoutToolStripMenuItem1
-            // 
-            this.ajoutToolStripMenuItem1.Name = "ajoutToolStripMenuItem1";
-            this.ajoutToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
-            this.ajoutToolStripMenuItem1.Text = "Ajout";
-            // 
-            // modificationToolStripMenuItem1
-            // 
-            this.modificationToolStripMenuItem1.Name = "modificationToolStripMenuItem1";
-            this.modificationToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
-            this.modificationToolStripMenuItem1.Text = "Modification";
-            // 
-            // suppressionToolStripMenuItem
-            // 
-            this.suppressionToolStripMenuItem.Name = "suppressionToolStripMenuItem";
-            this.suppressionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.suppressionToolStripMenuItem.Text = "Suppression";
-            // 
-            // devisToolStripMenuItem
-            // 
-            this.devisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualisationToolStripMenuItem2,
-            this.ajoutToolStripMenuItem2,
-            this.modificationToolStripMenuItem2});
-            this.devisToolStripMenuItem.Name = "devisToolStripMenuItem";
-            this.devisToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.devisToolStripMenuItem.Text = "&Document";
-            // 
-            // visualisationToolStripMenuItem2
-            // 
-            this.visualisationToolStripMenuItem2.Name = "visualisationToolStripMenuItem2";
-            this.visualisationToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
-            this.visualisationToolStripMenuItem2.Text = "Visualisation";
-            // 
-            // ajoutToolStripMenuItem2
-            // 
-            this.ajoutToolStripMenuItem2.Name = "ajoutToolStripMenuItem2";
-            this.ajoutToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
-            this.ajoutToolStripMenuItem2.Text = "Ajout";
-            // 
-            // modificationToolStripMenuItem2
-            // 
-            this.modificationToolStripMenuItem2.Name = "modificationToolStripMenuItem2";
-            this.modificationToolStripMenuItem2.Size = new System.Drawing.Size(142, 22);
-            this.modificationToolStripMenuItem2.Text = "Modification";
-            // 
-            // chiffreDaffaireToolStripMenuItem
-            // 
-            this.chiffreDaffaireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comptableToolStripMenuItem,
-            this.profitToolStripMenuItem});
-            this.chiffreDaffaireToolStripMenuItem.Name = "chiffreDaffaireToolStripMenuItem";
-            this.chiffreDaffaireToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.chiffreDaffaireToolStripMenuItem.Text = "&Information";
-            // 
-            // comptableToolStripMenuItem
-            // 
-            this.comptableToolStripMenuItem.Name = "comptableToolStripMenuItem";
-            this.comptableToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.comptableToolStripMenuItem.Text = "Comptable";
-            // 
-            // profitToolStripMenuItem
-            // 
-            this.profitToolStripMenuItem.Name = "profitToolStripMenuItem";
-            this.profitToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.profitToolStripMenuItem.Text = "Profit";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(230, 331);
+            this.label1.Location = new System.Drawing.Point(392, 582);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 25);
+            this.label1.Size = new System.Drawing.Size(320, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Bienvenue, sur votre logiciel préféré.";
+            this.label1.Text = "Bienvenue, sur votre logiciel préféré";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(260, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(423, 146);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 248);
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.Size = new System.Drawing.Size(242, 245);
+            this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // BtnProfVisua
+            // 
+            this.BtnProfVisua.Name = "BtnProfVisua";
+            this.BtnProfVisua.Size = new System.Drawing.Size(32, 19);
+            // 
+            // BtnProfModif
+            // 
+            this.BtnProfModif.Name = "BtnProfModif";
+            this.BtnProfModif.Size = new System.Drawing.Size(180, 22);
+            this.BtnProfModif.Text = "Modification";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(85, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Liste des clients";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnAffiClient);
+            // 
+            // BtnModClient
+            // 
+            this.BtnModClient.Location = new System.Drawing.Point(85, 194);
+            this.BtnModClient.Name = "BtnModClient";
+            this.BtnModClient.Size = new System.Drawing.Size(122, 23);
+            this.BtnModClient.TabIndex = 6;
+            this.BtnModClient.Text = "Modifier un client";
+            this.BtnModClient.UseVisualStyleBackColor = true;
+            this.BtnModClient.Click += new System.EventHandler(this.BtnModClient_Click);
+            // 
+            // BtnAjtClient
+            // 
+            this.BtnAjtClient.Location = new System.Drawing.Point(85, 249);
+            this.BtnAjtClient.Name = "BtnAjtClient";
+            this.BtnAjtClient.Size = new System.Drawing.Size(122, 23);
+            this.BtnAjtClient.TabIndex = 7;
+            this.BtnAjtClient.Text = "Ajouter un client";
+            this.BtnAjtClient.UseVisualStyleBackColor = true;
+            this.BtnAjtClient.Click += new System.EventHandler(this.BtnAjtClient_Click);
+            // 
+            // BtnAffProd
+            // 
+            this.BtnAffProd.Location = new System.Drawing.Point(85, 304);
+            this.BtnAffProd.Name = "BtnAffProd";
+            this.BtnAffProd.Size = new System.Drawing.Size(122, 23);
+            this.BtnAffProd.TabIndex = 9;
+            this.BtnAffProd.Text = "Liste des produits";
+            this.BtnAffProd.UseVisualStyleBackColor = true;
+            this.BtnAffProd.Click += new System.EventHandler(this.BtnAffProd_Click);
+            // 
+            // BtnModifProd
+            // 
+            this.BtnModifProd.Location = new System.Drawing.Point(85, 368);
+            this.BtnModifProd.Name = "BtnModifProd";
+            this.BtnModifProd.Size = new System.Drawing.Size(122, 23);
+            this.BtnModifProd.TabIndex = 10;
+            this.BtnModifProd.Text = "Modifier un produit";
+            this.BtnModifProd.UseVisualStyleBackColor = true;
+            this.BtnModifProd.Click += new System.EventHandler(this.BtnModifProd_Click);
+            // 
+            // BtnAffDoc
+            // 
+            this.BtnAffDoc.Location = new System.Drawing.Point(856, 146);
+            this.BtnAffDoc.Name = "BtnAffDoc";
+            this.BtnAffDoc.Size = new System.Drawing.Size(122, 23);
+            this.BtnAffDoc.TabIndex = 12;
+            this.BtnAffDoc.Text = "Liste des factures";
+            this.BtnAffDoc.UseVisualStyleBackColor = true;
+            this.BtnAffDoc.Click += new System.EventHandler(this.BtnAffDoc_Click);
+            // 
+            // BtnModDoc
+            // 
+            this.BtnModDoc.Location = new System.Drawing.Point(856, 194);
+            this.BtnModDoc.Name = "BtnModDoc";
+            this.BtnModDoc.Size = new System.Drawing.Size(122, 23);
+            this.BtnModDoc.TabIndex = 13;
+            this.BtnModDoc.Text = "Modifier une facture";
+            this.BtnModDoc.UseVisualStyleBackColor = true;
+            this.BtnModDoc.Click += new System.EventHandler(this.BtnModDoc_Click);
+            // 
+            // BtnAjtProd
+            // 
+            this.BtnAjtProd.Location = new System.Drawing.Point(85, 430);
+            this.BtnAjtProd.Name = "BtnAjtProd";
+            this.BtnAjtProd.Size = new System.Drawing.Size(122, 23);
+            this.BtnAjtProd.TabIndex = 15;
+            this.BtnAjtProd.Text = "Ajouter un produit";
+            this.BtnAjtProd.UseVisualStyleBackColor = true;
+            this.BtnAjtProd.Click += new System.EventHandler(this.BtnAjtProd_Click);
+            // 
+            // BtnAjtDoc
+            // 
+            this.BtnAjtDoc.Location = new System.Drawing.Point(856, 249);
+            this.BtnAjtDoc.Name = "BtnAjtDoc";
+            this.BtnAjtDoc.Size = new System.Drawing.Size(122, 23);
+            this.BtnAjtDoc.TabIndex = 16;
+            this.BtnAjtDoc.Text = "Créer une facture";
+            this.BtnAjtDoc.UseVisualStyleBackColor = true;
+            this.BtnAjtDoc.Click += new System.EventHandler(this.BtnAjtDoc_Click);
+            // 
+            // BtnVisuProf
+            // 
+            this.BtnVisuProf.Location = new System.Drawing.Point(856, 304);
+            this.BtnVisuProf.Name = "BtnVisuProf";
+            this.BtnVisuProf.Size = new System.Drawing.Size(122, 23);
+            this.BtnVisuProf.TabIndex = 17;
+            this.BtnVisuProf.Text = "Visualiser mon profil";
+            this.BtnVisuProf.UseVisualStyleBackColor = true;
+            this.BtnVisuProf.Click += new System.EventHandler(this.BtnVisuProf_Click);
+            // 
+            // BtnModifProf
+            // 
+            this.BtnModifProf.Location = new System.Drawing.Point(856, 368);
+            this.BtnModifProf.Name = "BtnModifProf";
+            this.BtnModifProf.Size = new System.Drawing.Size(122, 23);
+            this.BtnModifProf.TabIndex = 18;
+            this.BtnModifProf.Text = "Modifier mon profil";
+            this.BtnModifProf.UseVisualStyleBackColor = true;
+            this.BtnModifProf.Click += new System.EventHandler(this.BtnModifProf_Click);
+            // 
+            // BtnInformation
+            // 
+            this.BtnInformation.Location = new System.Drawing.Point(856, 421);
+            this.BtnInformation.Name = "BtnInformation";
+            this.BtnInformation.Size = new System.Drawing.Size(122, 23);
+            this.BtnInformation.TabIndex = 19;
+            this.BtnInformation.Text = "Information Comptable";
+            this.BtnInformation.UseVisualStyleBackColor = true;
+            this.BtnInformation.Click += new System.EventHandler(this.BtnInformation_Click);
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.BtnInformation);
+            this.Controls.Add(this.BtnModifProf);
+            this.Controls.Add(this.BtnVisuProf);
+            this.Controls.Add(this.BtnAjtDoc);
+            this.Controls.Add(this.BtnAjtProd);
+            this.Controls.Add(this.BtnModDoc);
+            this.Controls.Add(this.BtnAffDoc);
+            this.Controls.Add(this.BtnModifProd);
+            this.Controls.Add(this.BtnAffProd);
+            this.Controls.Add(this.BtnAjtClient);
+            this.Controls.Add(this.BtnModClient);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenu";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,30 +230,22 @@ namespace AutoFact
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prestationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem suppressionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem devisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem chiffreDaffaireToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comptableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualisationToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem modificationToolStripMenuItem3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem BtnProfVisua;
+        private System.Windows.Forms.ToolStripMenuItem BtnProfModif;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnModClient;
+        private System.Windows.Forms.Button BtnAjtClient;
+        private System.Windows.Forms.Button BtnAffProd;
+        private System.Windows.Forms.Button BtnModifProd;
+        private System.Windows.Forms.Button BtnAffDoc;
+        private System.Windows.Forms.Button BtnModDoc;
+        private System.Windows.Forms.Button BtnAjtProd;
+        private System.Windows.Forms.Button BtnAjtDoc;
+        private System.Windows.Forms.Button BtnVisuProf;
+        private System.Windows.Forms.Button BtnModifProf;
+        private System.Windows.Forms.Button BtnInformation;
     }
 }
 

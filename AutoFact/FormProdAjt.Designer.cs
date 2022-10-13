@@ -1,6 +1,6 @@
 ﻿namespace AutoFact
 {
-    partial class FormInformationC
+    partial class FormProdAjt
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // FormInformationC
+            // FormPrestationA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Name = "FormInformationC";
+            this.Name = "FormPrestationA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
             this.ResumeLayout(false);
