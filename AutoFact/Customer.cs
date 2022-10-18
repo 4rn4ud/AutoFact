@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Customers
+     class Customer
     {
         private int id;
         private string name;
@@ -19,7 +19,7 @@ namespace AutoFact
         private string mail;
         private int tel;
 
-        public Customers(int theid, string thename, string thelastname, string thecompanyname, int postalcode
+        public Customer(int theid, string thename, string thelastname, string thecompanyname, int postalcode
             , string theadress, string thecity, int thetel)
         {
 
