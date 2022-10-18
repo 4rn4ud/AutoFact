@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Credit.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Customers.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="FormClientAjt.cs">

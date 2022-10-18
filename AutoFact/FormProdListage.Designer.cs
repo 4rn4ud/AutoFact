@@ -40,6 +40,7 @@
             this.dataGridViewListeProd.Name = "dataGridViewListeProd";
             this.dataGridViewListeProd.Size = new System.Drawing.Size(365, 150);
             this.dataGridViewListeProd.TabIndex = 0;
+            this.dataGridViewListeProd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListeProd_CellContentClick);
             // 
             // TitreListeProd
             // 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.labCompName = new System.Windows.Forms.Label();
             this.labSiren = new System.Windows.Forms.Label();
             this.labadress = new System.Windows.Forms.Label();
@@ -44,14 +43,6 @@
             this.boxTel = new System.Windows.Forms.TextBox();
             this.boxEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(377, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
             // 
             // labCompName
             // 
@@ -184,18 +175,16 @@
             this.Controls.Add(this.labadress);
             this.Controls.Add(this.labSiren);
             this.Controls.Add(this.labCompName);
-            this.Controls.Add(this.label1);
             this.Name = "FormProfilAff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.FormProfilAff_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labCompName;
         private System.Windows.Forms.Label labSiren;
         private System.Windows.Forms.Label labadress;

@@ -33,5 +33,10 @@ namespace AutoFact
             dataGridViewListeProd.DataSource = dset.Tables[0];
             conn.Close();
         }
+
+        private void dataGridViewListeProd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
