@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AutoFact.Models;
+using System.Data.Entity;
 
 namespace AutoFact
 {
@@ -32,13 +34,19 @@ namespace AutoFact
 
         private void FormClientV_Load(object sender, EventArgs e)
         {
+            /*
             SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db");
             conn.Open(); 
             SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From customers", conn); 
             DataSet dset = new DataSet();
             adapter.Fill(dset, "info");
             dataGridViewCustomers.DataSource = dset.Tables[0];
-            conn.Close();
+            conn.Close();*/
+           // DataSet dset = new DataSet();
+            foreach (Customer unCustomer in CustomerManager.getAllCustomer())
+            {
+                dataGridViewCustomers.Rows.Add(unCustomer.getId(),unCustomer.getName(), unCustomer.getLastname(), unCustomer.getCompanyName(), unCustomer.getPostalcode(), unCustomer.getAdress(), unCustomer.getCity(), unCustomer.getMail(), unCustomer.getTel());
+            }
 
 
 

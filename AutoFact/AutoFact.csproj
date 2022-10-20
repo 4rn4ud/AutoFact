@@ -69,7 +69,6 @@
   <ItemGroup>
     <Compile Include="Credit.cs" />
     <Compile Include="Customer.cs" />
-    <Compile Include="Customers.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="FormClientAjt.cs">
@@ -157,6 +156,7 @@
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoiceline.cs" />
+    <Compile Include="Models\CustomerManager.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Profil.cs" />
     <Compile Include="Program.cs" />

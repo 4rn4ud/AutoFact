@@ -9,24 +9,24 @@ namespace AutoFact
      class Quote
     {
         private int id;
-        private Customers _customers;
+        private Customer _customer;
 
-        public Quote(int theid, Customers thecustomer)
+        public Quote(int theid, Customer thecustomer)
         {
             this.id = theid;
-            this._customers = thecustomer;
+            this._customer = thecustomer;
         }
         public int getId()
         {
             return this.id;
         }
-        public Customers getCustomer()
+        public Customer getCustomer()
         {
-            return this._customers;
+            return this._customer;
         }
-        public void setCustomers(Customers onecustomers)
+        public void setCustomers(Customer onecustomers)
         {
-            this._customers = onecustomers;
+            this._customer = onecustomers;
         }
         
     }

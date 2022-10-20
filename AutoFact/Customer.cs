@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Customer
+     public class Customer
     {
         private int id;
         private string name;
@@ -20,7 +20,7 @@ namespace AutoFact
         private int tel;
 
         public Customer(int theid, string thename, string thelastname, string thecompanyname, int postalcode
-            , string theadress, string thecity, int thetel)
+            , string theadress, string thecity, string themail, int thetel)
         {
 
             this.id = theid;
@@ -30,6 +30,7 @@ namespace AutoFact
             this.postalcode = postalcode;
             this.adress = theadress;
             this.city = thecity;
+            this.mail = themail;    
             this.tel = thetel;
 
         }
@@ -54,7 +55,7 @@ namespace AutoFact
         {
             this.name = onelastname.Trim();
         }
-        public string getcompanyname()
+        public string getCompanyName()
         {
             return this.companyname;
         }
@@ -86,6 +87,8 @@ namespace AutoFact
         {
             this.city = onecity.Trim();
         }
+
+        
         public int getTel()
         {
             return this.tel;
@@ -95,10 +98,6 @@ namespace AutoFact
             this.tel = onetel;
         }
 
-        public void afficher()
-        {
-            
-        }
         public string getMail()
         {
             return this.mail;
