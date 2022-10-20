@@ -42,6 +42,7 @@
             this.labadress = new System.Windows.Forms.Label();
             this.labSiren = new System.Windows.Forms.Label();
             this.labCompName = new System.Windows.Forms.Label();
+            this.butSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // boxEmail
@@ -156,11 +157,21 @@
             this.labCompName.TabIndex = 17;
             this.labCompName.Text = "Raison Sociale:";
             // 
+            // butSave
+            // 
+            this.butSave.Location = new System.Drawing.Point(675, 558);
+            this.butSave.Name = "butSave";
+            this.butSave.Size = new System.Drawing.Size(75, 23);
+            this.butSave.TabIndex = 31;
+            this.butSave.Text = "Sauvegarder";
+            this.butSave.UseVisualStyleBackColor = true;
+            // 
             // FormProfilModif
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.butSave);
             this.Controls.Add(this.boxEmail);
             this.Controls.Add(this.boxTel);
             this.Controls.Add(this.boxCity);
@@ -199,5 +210,6 @@
         private System.Windows.Forms.Label labadress;
         private System.Windows.Forms.Label labSiren;
         private System.Windows.Forms.Label labCompName;
+        private System.Windows.Forms.Button butSave;
     }
 }

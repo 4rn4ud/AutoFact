@@ -29,11 +29,17 @@ namespace AutoFact
         {            
             SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db");
             conn.Open();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From product", conn);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter("select quote.id, idcustomers, type.libel from quote inner join status on quote.id = status.idquote inner JOIN type on type.id = status.idtype GROUP by quote.id having max(idtype)", conn);
+                                                                       
             DataSet dset = new DataSet();
             adapter.Fill(dset, "info");
             dataGridQuot.DataSource = dset.Tables[0];
             conn.Close();
+        }
+
+        private void dataGridQuot_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

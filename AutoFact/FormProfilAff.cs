@@ -25,7 +25,7 @@ namespace AutoFact
             SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From product", conn);
             DataSet dset = new DataSet();
             adapter.Fill(dset, "info");
-            dataGridViewQuote.DataSource = dset.Tables[0];
+           // dataGridViewQuote.DataSource = dset.Tables[0];
             conn.Close();
         }
     }

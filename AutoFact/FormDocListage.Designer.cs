@@ -39,6 +39,7 @@
             this.dataGridQuot.Name = "dataGridQuot";
             this.dataGridQuot.Size = new System.Drawing.Size(541, 150);
             this.dataGridQuot.TabIndex = 0;
+            this.dataGridQuot.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridQuot_CellContentClick);
             // 
             // FormDocListage
             // 
