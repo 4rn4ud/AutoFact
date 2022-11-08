@@ -156,7 +156,11 @@
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoiceline.cs" />
+    <Compile Include="ManagerQuote.cs" />
     <Compile Include="Models\CustomerManager.cs" />
+    <Compile Include="Models\ManagerStatus.cs" />
+    <Compile Include="Models\ProductManager.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Profil.cs" />
     <Compile Include="Program.cs" />

@@ -9,24 +9,25 @@ namespace AutoFact
      class Quote
     {
         private int id;
-        private Customer _customer;
+        private int _idcustomer;
+        //private Invoiceline la liste des lignes de facture
 
-        public Quote(int theid, Customer thecustomer)
+        public Quote(int theid, int thecustomer)
         {
             this.id = theid;
-            this._customer = thecustomer;
+            this._idcustomer = thecustomer;
         }
         public int getId()
         {
             return this.id;
         }
-        public Customer getCustomer()
+        public int getCustomer()
         {
-            return this._customer;
+            return this._idcustomer;
         }
-        public void setCustomers(Customer onecustomers)
+        public void setCustomers(int onecustomers)
         {
-            this._customer = onecustomers;
+            this._idcustomer = onecustomers;
         }
         
     }

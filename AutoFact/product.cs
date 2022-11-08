@@ -15,10 +15,10 @@ namespace AutoFact
     {
         private int id;
         private string libel;
-        private int unitprice;
+        private double unitprice;
 
 
-        public Product(int theid, string thelibel, int theunitprice)
+        public Product(int theid, string thelibel, double theunitprice)
         {
             this.id = theid;
             this.libel = thelibel;
@@ -26,7 +26,7 @@ namespace AutoFact
 
         }
 
-        private int getId()
+        public int getId()
         {
             return this.id;
         }
@@ -42,11 +42,11 @@ namespace AutoFact
             this.libel = onelibel.Trim();
 
         }
-        public int getUnitprice()
+        public double getUnitprice()
         {
             return this.unitprice;
         }
-        public void setUnitprice(int oneinitprice)
+        public void setUnitprice(double oneinitprice)
         {
             this.unitprice = oneinitprice;
         }

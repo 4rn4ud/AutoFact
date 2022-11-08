@@ -9,16 +9,16 @@ namespace AutoFact
      class Status
     {
         private DateTime date;
-        private Quote _quote;
-        private Type _type;
+        private int _idquote;
+        private int _idtype;
 
 
 
-        public Status(DateTime thedate, Quote thequote, Type thetype)
+        public Status(DateTime thedate, int thequote, int thetype)
         {
             this.date = thedate;
-            this._quote = thequote;
-            this._type = thetype;
+            this._idquote = thequote;
+            this._idtype = thetype;
         }
         public DateTime getDate() 
         { 
@@ -28,21 +28,15 @@ namespace AutoFact
         {
             this.date = onedate;
         }
-        public Quote getQuote()
+        public int getidQuote()
         {
-            return this._quote;
+            return this._idquote;
         }
-        public void setQuote(Quote onequote)
+
+        public int getType()
         {
-            this._quote = onequote;
+            return this._idtype;
         }
-        public Type getType()
-        {
-            return this._type;
-        }
-        public void setType(Type onetype)
-        {
-            this._type = onetype;
-        }
+        
     }
 }

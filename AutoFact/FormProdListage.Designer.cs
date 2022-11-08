@@ -30,12 +30,19 @@
         {
             this.dataGridViewListeProd = new System.Windows.Forms.DataGridView();
             this.TitreListeProd = new System.Windows.Forms.Label();
+            this.colid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLibel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeProd)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewListeProd
             // 
             this.dataGridViewListeProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListeProd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colid,
+            this.colLibel,
+            this.colUnitPrice});
             this.dataGridViewListeProd.Location = new System.Drawing.Point(211, 301);
             this.dataGridViewListeProd.Name = "dataGridViewListeProd";
             this.dataGridViewListeProd.Size = new System.Drawing.Size(365, 150);
@@ -50,6 +57,21 @@
             this.TitreListeProd.Size = new System.Drawing.Size(119, 13);
             this.TitreListeProd.TabIndex = 1;
             this.TitreListeProd.Text = "La Liste de vos produits";
+            // 
+            // colid
+            // 
+            this.colid.HeaderText = "Id";
+            this.colid.Name = "colid";
+            // 
+            // colLibel
+            // 
+            this.colLibel.HeaderText = "Libellé";
+            this.colLibel.Name = "colLibel";
+            // 
+            // colUnitPrice
+            // 
+            this.colUnitPrice.HeaderText = "Prix unitaire";
+            this.colUnitPrice.Name = "colUnitPrice";
             // 
             // FormProdListage
             // 
@@ -72,5 +94,8 @@
 
         private System.Windows.Forms.DataGridView dataGridViewListeProd;
         private System.Windows.Forms.Label TitreListeProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLibel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPrice;
     }
 }

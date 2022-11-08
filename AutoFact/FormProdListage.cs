@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,13 +26,10 @@ namespace AutoFact
 
         private void FormProdListage_Load(object sender, EventArgs e)
         {
-            SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db");
-            conn.Open();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From product", conn);
-            DataSet dset = new DataSet();
-            adapter.Fill(dset, "info");
-            dataGridViewListeProd.DataSource = dset.Tables[0];
-            conn.Close();
+            foreach (Product oneProduct in ProductManager.getAllProduct())
+            {
+                dataGridViewListeProd.Rows.Add(oneProduct.getId(), oneProduct.getLibel(), oneProduct.getUnitprice());
+            }
         }
 
         private void dataGridViewListeProd_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -10,16 +10,16 @@ namespace AutoFact
     {
         private int quantity;
         private int promotion;
-        private Quote _command;
-        private Product _product;
+        private Quote _idquote;
+        private Product _idproduct;
 
 
-        public Invoiceline(int thequantity,int thepromotion, Quote thecommand, Product theproduct)
+        public Invoiceline(int thequantity,int thepromotion, Quote thequote, Product theproduct)
         {
             this.quantity = thequantity;
             this.promotion = thepromotion;
-            this._command = thecommand;
-            this._product = theproduct;
+            this._idquote = thequote;
+            this._idproduct = theproduct;
             
         }
         public int getQuantity()
@@ -40,19 +40,14 @@ namespace AutoFact
         }
         public Quote getCommand()
         {
-            return this._command;
+            return this._idquote;
         }
-        public void setCommand(Quote onecommand)
-        {
-            this._command=onecommand;
-        }
+       
         public Product getProduct()
         {
-            return this._product;
+            return this._idproduct;
         }
-        public void setProduct(Product oneproduct)
-        {
-            this._product = oneproduct;
+      
         }
     }
 }
