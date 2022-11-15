@@ -155,12 +155,13 @@
     <Compile Include="FormProfilAff.Designer.cs">
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface1.cs" />
     <Compile Include="Invoiceline.cs" />
-    <Compile Include="ManagerQuote.cs" />
-    <Compile Include="Models\CustomerManager.cs" />
+    <Compile Include="Models\ManagerInvoiceline.cs" />
+    <Compile Include="Models\ManagerQuote.cs" />
+    <Compile Include="Models\ManagerCustomers.cs" />
     <Compile Include="Models\ManagerStatus.cs" />
-    <Compile Include="Models\ProductManager.cs" />
-    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\ManagerProduct.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Profil.cs" />
     <Compile Include="Program.cs" />

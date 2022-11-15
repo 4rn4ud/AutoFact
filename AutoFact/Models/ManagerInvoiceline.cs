@@ -5,21 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoFact
+namespace AutoFact.Models
 {
-    internal class ManagerQuote
+    internal class ManagerInvoiceline
     {
+
         public static SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
         public static SQLiteDataAdapter adapter;
         public static SQLiteCommand cmd;
 
 
-        public static List<Quote> getAllQuote()
+        public static List<Invoiceline> getAllInvoiceline()
         {
-            List<Quote> list = new List<Quote>();
+            List<Invoiceline> list = new List<Invoiceline>();
             StringBuilder query = new StringBuilder();
             query.Append("SELECT * ");
-            query.Append("FROM quote ");
+            query.Append("FROM invoiceline ");
 
             cmd = new SQLiteCommand(query.ToString(), conn);
 
@@ -29,13 +30,13 @@ namespace AutoFact
             {
                 while (dr.Read())
                 {
-                    list.Add(new Quote(Convert.ToInt32(dr["id"]), Convert.ToInt32(dr["idcustomers"])));
+                    list.Add(new Invoiceline(Convert.ToInt32(dr["idproduct"]), Convert.ToInt32(dr["idquote"]), Convert.ToInt32(dr["quantity"]), Convert.ToInt32(dr["promotion"])));
                 }
             }
-
+            conn.Close();
             return list;
 
-            conn.Close();
+
         }
     }
 }

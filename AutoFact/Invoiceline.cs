@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 namespace AutoFact
 {
      class Invoiceline
-    {
+     {
         private int quantity;
         private int promotion;
-        private Quote _idquote;
-        private Product _idproduct;
+        private int _idquote;
+        private int _productId;
 
 
-        public Invoiceline(int thequantity,int thepromotion, Quote thequote, Product theproduct)
+        public Invoiceline(int thequantity,int thepromotion, int thequote, int productId)
         {
             this.quantity = thequantity;
             this.promotion = thepromotion;
             this._idquote = thequote;
-            this._idproduct = theproduct;
+            this._productId = productId;
             
         }
         public int getQuantity()
@@ -38,16 +38,14 @@ namespace AutoFact
         {
             this.promotion=thepromotion;
         }
-        public Quote getCommand()
+        public int getIdQuote()
         {
             return this._idquote;
         }
-       
+      
         public Product getProduct()
         {
-            return this._idproduct;
+            return Product.get(_productId);
         }
-      
-        }
-    }
+     }
 }

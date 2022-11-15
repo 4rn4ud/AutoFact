@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     public class Customer
+     public class Customer : Interface1
     {
         private int id;
         private string name;
@@ -19,6 +19,22 @@ namespace AutoFact
         private string mail;
         private int tel;
 
+
+
+        public Customer(string thename, string thelastname, string thecompanyname, int postalcode
+            , string theadress, string thecity, string themail, int thetel)
+        {
+
+            this.name = thename;
+            this.lastname = thelastname;
+            this.companyname = thecompanyname;
+            this.postalcode = postalcode;
+            this.adress = theadress;
+            this.city = thecity;
+            this.mail = themail;
+            this.tel = thetel;
+
+        }
         public Customer(int theid, string thename, string thelastname, string thecompanyname, int postalcode
             , string theadress, string thecity, string themail, int thetel)
         {
@@ -106,7 +122,43 @@ namespace AutoFact
         {
             this.mail = onemail.Trim();
         }
+        public bool insert()
+        {
+            int count;
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
 
+
+
+
+                    conn.Open();
+                    string strSql = "INSERT INTO[customers] ([name],[lastname],[companyname],[postalcode],[adress],[city],[mail],[tel]) " +
+                        "VALUES(@name,@lastname,@companyname,@postalcode,@adress,@city,@mail,@tel)";
+
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@lastname", lastname);
+                    cmd.Parameters.AddWithValue("@companyname", companyname);
+                    cmd.Parameters.AddWithValue("@postalcode", postalcode);
+                    cmd.Parameters.AddWithValue("@adress", adress);
+                    cmd.Parameters.AddWithValue("@city", city);
+                    cmd.Parameters.AddWithValue("@mail", mail);
+                    cmd.Parameters.AddWithValue("@tel", tel);
+
+
+
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+
+                }
+            }
+
+            return count != 0;
+        }
 
     }
 }

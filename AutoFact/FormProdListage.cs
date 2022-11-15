@@ -26,7 +26,7 @@ namespace AutoFact
 
         private void FormProdListage_Load(object sender, EventArgs e)
         {
-            foreach (Product oneProduct in ProductManager.getAllProduct())
+            foreach (Product oneProduct in ManagerProduct.getAllProduct())
             {
                 dataGridViewListeProd.Rows.Add(oneProduct.getId(), oneProduct.getLibel(), oneProduct.getUnitprice());
             }

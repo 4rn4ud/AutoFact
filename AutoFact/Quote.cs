@@ -10,7 +10,7 @@ namespace AutoFact
     {
         private int id;
         private int _idcustomer;
-        //private Invoiceline la liste des lignes de facture
+        
 
         public Quote(int theid, int thecustomer)
         {
