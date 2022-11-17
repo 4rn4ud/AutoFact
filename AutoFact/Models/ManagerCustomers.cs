@@ -36,8 +36,8 @@ namespace AutoFact.Models
             conn.Close();
 
             return list;
-
-            
         }
+
+      
     }
 }

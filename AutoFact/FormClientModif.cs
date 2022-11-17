@@ -27,17 +27,7 @@ namespace AutoFact
 
         private void FormClientModif_Load(object sender, EventArgs e)
         {
-            foreach(Customer aCustomer in ManagerCustomers.getAllCustomer())
-            {
-                if (aCustomer.getName() == "")
-                {
-                    ListCustomers.Items.Add(aCustomer.getCompanyName());
-                    ListCustomers.Items.Add(aCustomer.getName() + " " + aCustomer.getLastname());
-
-                }
-                else ListCustomers.Items.Add(aCustomer.getName() + " " + aCustomer.getLastname());
-
-            }
+            ListCustomers.DataSource = ManagerCustomers.getAllCustomer();
 
 
 
@@ -48,12 +38,17 @@ namespace AutoFact
 
         }
 
-        private void ListCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        public void ListCustomers_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string[] customers = ListCustomers.SelectedValue.ToString().Split(',');
+
+
             foreach (Customer theCustomer in ManagerCustomers.getAllCustomer())
-            {//Il faut recuperer l'id de la combobox
-                if (theCustomer.getId() == ListCustomers.)
+            {
+               
+                if (theCustomer.getId() == Convert.ToInt32(customers[0]))
                 {
+                  
                     TxtCustAdress.Text = theCustomer.getAdress();
                     TxtCustCity.Text = theCustomer.getCity();
                     TxtCustCompany.Text = theCustomer.getCompanyName();
@@ -67,6 +62,34 @@ namespace AutoFact
 
             }
            
+        }
+
+        private void butModif_Click(object sender, EventArgs e)
+        {
+            string[] customers = ListCustomers.SelectedValue.ToString().Split(',');
+            foreach (Customer theCustomer in ManagerCustomers.getAllCustomer())
+            {
+
+                if (theCustomer.getId() == Convert.ToInt32(customers[0]))
+                {
+                    theCustomer.setName(TxtCustName.Text);
+                    theCustomer.setLastname(TxtCustLastName.Text);
+                    theCustomer.setCompannyName(TxtCustCompany.Text);
+                    theCustomer.setPostalcode(Convert.ToInt32(TxtCustPostal.Text));
+                    theCustomer.setAdress(TxtCustAdress.Text);
+                    theCustomer.setCity(TxtCustCity.Text);                                    
+                    theCustomer.setMail(TxtCustMail.Text);                   
+                    theCustomer.setTel(Convert.ToInt32(TxtCustTel.Text));
+                    if (theCustomer.update())
+                    {
+                        MessageBox.Show("Vous avez bien modifié le produit.");
+                    }
+                    else MessageBox.Show("Erreur.");
+                }
+
+
+            }
+
         }
     }
 }

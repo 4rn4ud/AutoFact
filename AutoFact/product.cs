@@ -125,5 +125,10 @@ namespace AutoFact
 
             return count != 0;
         }
+        public bool update()
+        {
+            int count=0;
+            return count != 0;
+        }
     }
 }

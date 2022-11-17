@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AutoFact
 {
@@ -50,6 +51,23 @@ namespace AutoFact
             this.tel = thetel;
 
         }
+        public override string ToString()
+
+        {
+            if (this.name == "")
+            {
+                return this.id +","+this.companyname;
+            }
+            else
+            {
+                return this.id + "," + this.name+","+this.lastname; 
+            }
+            
+
+        }
+
+       
+        
         public int getId()
         {
             return this.id;
@@ -75,7 +93,8 @@ namespace AutoFact
         {
             return this.companyname;
         }
-        public void setlastname(string onecompanyname)
+       
+        public void setCompannyName(string onecompanyname)
         {
             this.companyname = onecompanyname.Trim();
         }
@@ -157,6 +176,40 @@ namespace AutoFact
                 }
             }
 
+            return count != 0;
+        }
+        public bool update()
+        {
+            int count;
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+                  
+                    conn.Open();
+                    string strSql = "UPDATE customers SET name = @name, lastname = @lastname, companyname = @companyname, postalcode =@postalcode, adress = @adress, city =@city, mail = @mail, tel = @tel WHERE id =@oneid";
+                    cmd.Parameters.AddWithValue("@oneid", id);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@lastname", lastname);
+                    cmd.Parameters.AddWithValue("@companyname", companyname);
+                    cmd.Parameters.AddWithValue("@postalcode", postalcode);
+                    cmd.Parameters.AddWithValue("@adress", adress);
+                    cmd.Parameters.AddWithValue("@city", city);
+                    cmd.Parameters.AddWithValue("@mail", mail);
+                    cmd.Parameters.AddWithValue("@tel", tel);
+
+
+
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show(id.ToString());
+
+
+
+                }
+            }
             return count != 0;
         }
 

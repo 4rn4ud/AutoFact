@@ -46,6 +46,7 @@
             this.TxtCustName = new System.Windows.Forms.TextBox();
             this.TxtCustCity = new System.Windows.Forms.TextBox();
             this.TxtCustAdress = new System.Windows.Forms.TextBox();
+            this.butModif = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListCustomers
@@ -203,11 +204,22 @@
             this.TxtCustAdress.Size = new System.Drawing.Size(76, 20);
             this.TxtCustAdress.TabIndex = 20;
             // 
+            // butModif
+            // 
+            this.butModif.Location = new System.Drawing.Point(614, 533);
+            this.butModif.Name = "butModif";
+            this.butModif.Size = new System.Drawing.Size(75, 23);
+            this.butModif.TabIndex = 36;
+            this.butModif.Text = "Modifier";
+            this.butModif.UseVisualStyleBackColor = true;
+            this.butModif.Click += new System.EventHandler(this.butModif_Click);
+            // 
             // FormClientModif
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.butModif);
             this.Controls.Add(this.tel);
             this.Controls.Add(this.mail);
             this.Controls.Add(this.city);
@@ -255,5 +267,6 @@
         private System.Windows.Forms.TextBox TxtCustName;
         private System.Windows.Forms.TextBox TxtCustCity;
         private System.Windows.Forms.TextBox TxtCustAdress;
+        private System.Windows.Forms.Button butModif;
     }
 }
