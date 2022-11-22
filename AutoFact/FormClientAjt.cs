@@ -36,7 +36,7 @@ namespace AutoFact
             Customer customer = new Customer(TxtCustName.Text.Trim(), TxtCustLastName.Text.Trim(), TxtCustCompany.Text.Trim(), Convert.ToInt32(TxtCustPostal.Text.Trim()), TxtCustAdress.Text.Trim(), TxtCustCity.Text.Trim(), TxtCustMail.Text.Trim(), Convert.ToInt32(TxtCustTel.Text.Trim()));
             if (customer.insert())
             {
-                MessageBox.Show("Vous avez bien ajouté le produit.");
+                MessageBox.Show("Vous avez bien ajouté le client.");
                 TxtCustName.Clear();
                 TxtCustLastName.Clear();
                 TxtCustCompany.Clear();

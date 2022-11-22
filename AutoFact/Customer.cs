@@ -54,13 +54,13 @@ namespace AutoFact
         public override string ToString()
 
         {
-            if (this.name == "")
+            if (this.companyname == "")
             {
-                return this.id +","+this.companyname;
+                return this.id + "," + this.name + "," + this.lastname;
             }
             else
             {
-                return this.id + "," + this.name+","+this.lastname; 
+                return this.id + "," + this.companyname;
             }
             
 
@@ -79,7 +79,7 @@ namespace AutoFact
         }
         public void setName(string onename)
         {
-            this.name = onename.Trim();
+            this.name = onename;
         }
         public string getLastname()
         {
@@ -87,7 +87,7 @@ namespace AutoFact
         }
         public void setLastname(string onelastname)
         {
-            this.name = onelastname.Trim();
+            this.lastname = onelastname;
         }
         public string getCompanyName()
         {

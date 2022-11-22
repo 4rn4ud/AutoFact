@@ -30,7 +30,7 @@ namespace AutoFact.Models
             {
                 while (dr.Read())
                 {
-                    list.Add(new Invoiceline(Convert.ToInt32(dr["idproduct"]), Convert.ToInt32(dr["idquote"]), Convert.ToInt32(dr["quantity"]), Convert.ToInt32(dr["promotion"])));
+                    list.Add(new Invoiceline(Convert.ToInt32(dr["idproduct"]), Convert.ToInt32(dr["idquote"]), Convert.ToInt32(dr["quantity"]), Convert.ToInt32(dr["promotion"]), Convert.ToDouble("unitprice")));
                 }
             }
             conn.Close();

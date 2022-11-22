@@ -49,13 +49,13 @@ namespace AutoFact
                 if (theCustomer.getId() == Convert.ToInt32(customers[0]))
                 {
                   
-                    TxtCustAdress.Text = theCustomer.getAdress();
-                    TxtCustCity.Text = theCustomer.getCity();
-                    TxtCustCompany.Text = theCustomer.getCompanyName();
-                    TxtCustLastName.Text = theCustomer.getLastname();
-                    TxtCustMail.Text = theCustomer.getMail();
                     TxtCustName.Text = theCustomer.getName();
+                    TxtCustLastName.Text = theCustomer.getLastname();
+                    TxtCustCompany.Text = theCustomer.getCompanyName();
                     TxtCustPostal.Text = theCustomer.getPostalcode().ToString();
+                    TxtCustAdress.Text = theCustomer.getAdress();
+                    TxtCustCity.Text = theCustomer.getCity();                    
+                    TxtCustMail.Text = theCustomer.getMail();
                     TxtCustTel.Text = theCustomer.getTel().ToString();
                 }
                 
@@ -82,7 +82,8 @@ namespace AutoFact
                     theCustomer.setTel(Convert.ToInt32(TxtCustTel.Text));
                     if (theCustomer.update())
                     {
-                        MessageBox.Show("Vous avez bien modifié le produit.");
+                        this.Close();
+                        MessageBox.Show("Vous avez bien modifié le client.");
                     }
                     else MessageBox.Show("Erreur.");
                 }

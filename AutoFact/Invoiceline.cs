@@ -12,14 +12,16 @@ namespace AutoFact
         private int promotion;
         private int _idquote;
         private int _productId;
+        private double unitprice;
 
 
-        public Invoiceline(int thequantity,int thepromotion, int thequote, int productId)
+        public Invoiceline(int thequantity,int thepromotion, int thequote, int productId, double theunitprice)
         {
             this.quantity = thequantity;
             this.promotion = thepromotion;
             this._idquote = thequote;
             this._productId = productId;
+            this.unitprice = theunitprice;
             
         }
         public int getQuantity()
@@ -43,9 +45,17 @@ namespace AutoFact
             return this._idquote;
         }
       
-        public Product getProduct()
+        public int getProduct()
         {
-            return Product.get(_productId);
+            return this._productId;
+        }
+        public double getUnitprice()
+        {
+            return this.unitprice;
+        }
+        public void setUnitPrice(double oneunitprice)
+        {
+            this.unitprice=oneunitprice;
         }
      }
 }
