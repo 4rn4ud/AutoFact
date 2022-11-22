@@ -158,12 +158,12 @@
     <Compile Include="Interface1.cs" />
     <Compile Include="Invoiceline.cs" />
     <Compile Include="Models\ManagerInvoiceline.cs" />
+    <Compile Include="Models\ManagerProfile.cs" />
     <Compile Include="Models\ManagerQuote.cs" />
     <Compile Include="Models\ManagerCustomers.cs" />
     <Compile Include="Models\ManagerStatus.cs" />
     <Compile Include="Models\ManagerProduct.cs" />
     <Compile Include="Product.cs" />
-    <Compile Include="Profil.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

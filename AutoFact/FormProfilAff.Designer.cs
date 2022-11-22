@@ -109,50 +109,66 @@
             // 
             // boxCompName
             // 
+            this.boxCompName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.boxCompName.Enabled = false;
             this.boxCompName.Location = new System.Drawing.Point(570, 147);
             this.boxCompName.Name = "boxCompName";
+            this.boxCompName.ReadOnly = true;
             this.boxCompName.Size = new System.Drawing.Size(100, 20);
             this.boxCompName.TabIndex = 9;
+            this.boxCompName.TextChanged += new System.EventHandler(this.boxCompName_TextChanged);
             // 
             // BoxSiren
             // 
+            this.BoxSiren.Enabled = false;
             this.BoxSiren.Location = new System.Drawing.Point(570, 197);
             this.BoxSiren.Name = "BoxSiren";
+            this.BoxSiren.ReadOnly = true;
             this.BoxSiren.Size = new System.Drawing.Size(100, 20);
             this.BoxSiren.TabIndex = 10;
             // 
             // BoxAdress
             // 
+            this.BoxAdress.Enabled = false;
             this.BoxAdress.Location = new System.Drawing.Point(570, 247);
             this.BoxAdress.Name = "BoxAdress";
+            this.BoxAdress.ReadOnly = true;
             this.BoxAdress.Size = new System.Drawing.Size(100, 20);
             this.BoxAdress.TabIndex = 11;
             // 
             // boxPostalCode
             // 
+            this.boxPostalCode.Enabled = false;
             this.boxPostalCode.Location = new System.Drawing.Point(570, 297);
             this.boxPostalCode.Name = "boxPostalCode";
+            this.boxPostalCode.ReadOnly = true;
             this.boxPostalCode.Size = new System.Drawing.Size(100, 20);
             this.boxPostalCode.TabIndex = 12;
             // 
             // boxCity
             // 
+            this.boxCity.Enabled = false;
             this.boxCity.Location = new System.Drawing.Point(570, 347);
             this.boxCity.Name = "boxCity";
+            this.boxCity.ReadOnly = true;
             this.boxCity.Size = new System.Drawing.Size(100, 20);
             this.boxCity.TabIndex = 13;
             // 
             // boxTel
             // 
+            this.boxTel.Enabled = false;
             this.boxTel.Location = new System.Drawing.Point(570, 397);
             this.boxTel.Name = "boxTel";
+            this.boxTel.ReadOnly = true;
             this.boxTel.Size = new System.Drawing.Size(100, 20);
             this.boxTel.TabIndex = 14;
             // 
             // boxEmail
             // 
+            this.boxEmail.Enabled = false;
             this.boxEmail.Location = new System.Drawing.Point(570, 443);
             this.boxEmail.Name = "boxEmail";
+            this.boxEmail.ReadOnly = true;
             this.boxEmail.Size = new System.Drawing.Size(100, 20);
             this.boxEmail.TabIndex = 15;
             // 

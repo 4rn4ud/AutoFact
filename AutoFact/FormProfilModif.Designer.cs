@@ -165,6 +165,7 @@
             this.butSave.TabIndex = 31;
             this.butSave.Text = "Sauvegarder";
             this.butSave.UseVisualStyleBackColor = true;
+            this.butSave.Click += new System.EventHandler(this.butSave_Click);
             // 
             // FormProfilModif
             // 
@@ -189,6 +190,7 @@
             this.Name = "FormProfilModif";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.FormProfilModif_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

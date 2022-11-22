@@ -36,6 +36,13 @@ namespace AutoFact
             this.unitprice = theunitprice;
 
         }
+        public override string ToString()
+
+        {
+           return this.id+", "+this.libel;
+
+
+        }
 
         public static Product get(int id)
         {

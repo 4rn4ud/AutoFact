@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,33 @@ namespace AutoFact
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMenu Menu = new FormMenu();
-            this.Hide();
-            Menu.Show();
+         
         }
+
+        private void FormProdModif_Load(object sender, EventArgs e)
+        {
+            ListProduct.DataSource = ManagerProduct.getAllProduct();
+        }
+        public void ListProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] theproduct = ListProduct.SelectedValue.ToString().Split(',');
+
+
+            foreach (Product oneproduct in ManagerProduct.getAllProduct())
+            {
+
+                if (oneproduct.getId() == Convert.ToInt32(theproduct[0]))
+                {
+
+                    txtLibel.Text = oneproduct.getLibel();
+                    txtPrice.Text = oneproduct.getUnitprice().ToString();
+                  
+                }
+
+
+            }
+
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,13 +21,26 @@ namespace AutoFact
 
         private void FormProfilAff_Load(object sender, EventArgs e)
         {
-            SQLiteConnection conn = new SQLiteConnection("DataSource = mydatabase.db");
-            conn.Open();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From product", conn);
-            DataSet dset = new DataSet();
-            adapter.Fill(dset, "info");
-           // dataGridViewQuote.DataSource = dset.Tables[0];
-            conn.Close();
+            foreach (Profile oneprofile in ManagerProfile.getAllProfile())
+            {
+                if (oneprofile.getId() == 1)
+                {
+                    BoxAdress.Text = oneprofile.getAdress();
+                    boxCity.Text = oneprofile.getCity();
+                    boxCompName.Text = oneprofile.getcompanyname();
+                    boxEmail.Text = oneprofile.getEmail();
+                    boxPostalCode.Text = oneprofile.getPostalcode().ToString();
+                    boxTel.Text = oneprofile.getTel().ToString();
+                    BoxSiren.Text = oneprofile.getSiren().ToString();
+                    
+                }
+                
+            }
+        }
+
+        private void boxCompName_TextChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }

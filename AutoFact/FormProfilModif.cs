@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,30 @@ namespace AutoFact
         public FormProfilModif()
         {
             InitializeComponent();
+        }
+
+        private void FormProfilModif_Load(object sender, EventArgs e)
+        {
+            foreach (Profile oneprofile in ManagerProfile.getAllProfile())
+            {
+                if (oneprofile.getId() == 1)
+                {
+                    BoxAdress.Text = oneprofile.getAdress();
+                    boxCity.Text = oneprofile.getCity();
+                    boxCompName.Text = oneprofile.getcompanyname();
+                    boxEmail.Text = oneprofile.getEmail();
+                    boxPostalCode.Text = oneprofile.getPostalcode().ToString();
+                    boxTel.Text = oneprofile.getTel().ToString();
+                    BoxSiren.Text = oneprofile.getSiren().ToString();
+
+                }
+
+            }
+        }
+
+        private void butSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

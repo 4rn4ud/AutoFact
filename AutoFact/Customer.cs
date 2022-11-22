@@ -204,7 +204,7 @@ namespace AutoFact
                     cmd.Connection = conn;
                     count = cmd.ExecuteNonQuery();
                     conn.Close();
-                    MessageBox.Show(id.ToString());
+                   
 
 
 

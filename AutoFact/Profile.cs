@@ -15,9 +15,10 @@ namespace AutoFact
         private string city;
         private int tel;
         private string email;
+        private int siren;
 
 
-        public Profile(string thecompanyname, string theadress, int thepostalcode, string thecity, int thetel, string theemail)
+        public Profile(string thecompanyname, string theadress, int thepostalcode, string thecity, int thetel, string theemail, int thesiren)
         {
             this.companyname = thecompanyname;
             this.adress = theadress;
@@ -25,8 +26,9 @@ namespace AutoFact
             this.city = thecity;
             this.tel = thetel;
             this.email = theemail;
+            this.siren = thesiren;
         }
-        public Profile(int theid, string thecompanyname, string theadress, int thepostalcode, string thecity, int thetel, string theemail)
+        public Profile(int theid, string thecompanyname, string theadress, int thepostalcode, string thecity, int thetel, string theemail,int thesiren)
         {
             this.id=theid;
             this.companyname = thecompanyname;
@@ -35,6 +37,11 @@ namespace AutoFact
             this.city = thecity;
             this.tel = thetel;
             this.email = theemail;
+            this.siren=thesiren;
+        }
+        public int getId()
+        {
+            return this.id;
         }
         public string getcompanyname()
         {
@@ -82,6 +89,14 @@ namespace AutoFact
         public void setTel(int onetel)
         {
             this.tel = onetel;
+        }
+        public int getSiren()
+        {
+            return this.siren;
+        }
+        public void setSiren(int onesiren)
+        {
+            this.siren= onesiren;
         }
     }
 }
