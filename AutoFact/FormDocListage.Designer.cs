@@ -29,17 +29,38 @@
         private void InitializeComponent()
         {
             this.dataGridQuot = new System.Windows.Forms.DataGridView();
+            this.colidquote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colidtype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coddate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuot)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridQuot
             // 
             this.dataGridQuot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridQuot.Location = new System.Drawing.Point(58, 216);
+            this.dataGridQuot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colidquote,
+            this.colidtype,
+            this.coddate});
+            this.dataGridQuot.Location = new System.Drawing.Point(125, 238);
             this.dataGridQuot.Name = "dataGridQuot";
-            this.dataGridQuot.Size = new System.Drawing.Size(541, 150);
+            this.dataGridQuot.Size = new System.Drawing.Size(589, 150);
             this.dataGridQuot.TabIndex = 0;
-            this.dataGridQuot.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridQuot_CellContentClick);
+            // 
+            // colidquote
+            // 
+            this.colidquote.HeaderText = "Numéro de facture:";
+            this.colidquote.Name = "colidquote";
+            // 
+            // colidtype
+            // 
+            this.colidtype.HeaderText = "État de la facture:";
+            this.colidtype.Name = "colidtype";
+            // 
+            // coddate
+            // 
+            this.coddate.HeaderText = "Date:";
+            this.coddate.Name = "coddate";
             // 
             // FormDocListage
             // 
@@ -59,5 +80,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridQuot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colidquote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colidtype;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coddate;
     }
 }

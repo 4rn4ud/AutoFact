@@ -17,6 +17,7 @@ namespace AutoFact
         {
             this.id = theid;
             this._idcustomer = thecustomer;
+            this.invoicelines = new List<Invoiceline>();
         }
         public int getId()
         {
@@ -39,5 +40,6 @@ namespace AutoFact
             return this.invoicelines;
         }
         
+       
     }
 }

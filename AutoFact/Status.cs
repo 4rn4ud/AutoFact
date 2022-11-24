@@ -11,6 +11,8 @@ namespace AutoFact
         private DateTime date;
         private int _idquote;
         private int _idtype;
+        private Type _type;
+        
 
 
 
@@ -19,6 +21,8 @@ namespace AutoFact
             this.date = thedate;
             this._idquote = thequote;
             this._idtype = thetype;
+           
+
         }
         public DateTime getDate() 
         { 
@@ -37,6 +41,9 @@ namespace AutoFact
         {
             return this._idtype;
         }
+         
+       
+        
         
     }
 }

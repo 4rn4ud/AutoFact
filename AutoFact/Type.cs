@@ -27,7 +27,8 @@ namespace AutoFact
             return this.libel;
         }
         public void SetLibel(string onelibel)
-        { this.libel = onelibel.Trim();
+        {
+            this.libel = onelibel.Trim();
         }
     }
 }

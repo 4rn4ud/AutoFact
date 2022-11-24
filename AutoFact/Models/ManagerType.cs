@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace AutoFact.Models
 {
-    internal class ManagerStatus
+    internal class ManagerType
     {
         public static SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
         public static SQLiteDataAdapter adapter;
         public static SQLiteCommand cmd;
 
 
-        public static List<Status> getAllStatus()
+        public static List<Type> getAllType()
         {
-            List<Status> list = new List<Status>();
+            List<Type> list = new List<Type>();
             StringBuilder query = new StringBuilder();
             query.Append("SELECT * ");
-            query.Append("FROM status ");
+            query.Append("FROM type");
 
             cmd = new SQLiteCommand(query.ToString(), conn);
 
@@ -29,7 +29,7 @@ namespace AutoFact.Models
             {
                 while (dr.Read())
                 {
-                    list.Add(new Status(Convert.ToDateTime(dr["date"]), Convert.ToInt32(dr["idquote"]), Convert.ToInt32(dr["idtype"])));
+                    list.Add(new Type(Convert.ToInt32(dr["id"]), dr["libel"].ToString()));
                 }
             }
             conn.Close();
