@@ -62,6 +62,7 @@
             this.ListProduct.Name = "ListProduct";
             this.ListProduct.Size = new System.Drawing.Size(121, 21);
             this.ListProduct.TabIndex = 2;
+            this.ListProduct.SelectedIndexChanged += new System.EventHandler(this.ListProduct_SelectedIndexChanged);
             // 
             // LabChoice
             // 
@@ -94,6 +95,7 @@
             this.butModif.TabIndex = 6;
             this.butModif.Text = "Modifier";
             this.butModif.UseVisualStyleBackColor = true;
+            this.butModif.Click += new System.EventHandler(this.butModif_Click);
             // 
             // FormProdModif
             // 

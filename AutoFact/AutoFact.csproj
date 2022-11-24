@@ -71,9 +71,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DbContext.cs" />
-    <Compile Include="FormClientAjt.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormClientAjt.cs" />
     <Compile Include="FormClientAjt.Designer.cs">
       <DependentUpon>FormClientAjt.cs</DependentUpon>
     </Compile>
@@ -83,75 +81,51 @@
     <Compile Include="FormClientModif.Designer.cs">
       <DependentUpon>FormClientModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClientListage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormClientListage.cs" />
     <Compile Include="FormClientListage.Designer.cs">
       <DependentUpon>FormClientListage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocAjt.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormDocAjt.cs" />
     <Compile Include="FormDocAjt.Designer.cs">
       <DependentUpon>FormDocAjt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocModif.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormDocModif.cs" />
     <Compile Include="FormDocModif.Designer.cs">
       <DependentUpon>FormDocModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocListage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormDocListage.cs" />
     <Compile Include="FormDocListage.Designer.cs">
       <DependentUpon>FormDocListage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInformationC.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormInformationC.cs" />
     <Compile Include="FormInformationC.Designer.cs">
       <DependentUpon>FormInformationC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormMenu.cs" />
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdAjt.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProdAjt.cs" />
     <Compile Include="FormProdAjt.Designer.cs">
       <DependentUpon>FormProdAjt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdModif.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProdModif.cs" />
     <Compile Include="FormProdModif.Designer.cs">
       <DependentUpon>FormProdModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdSup.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProdSup.cs" />
     <Compile Include="FormProdSup.Designer.cs">
       <DependentUpon>FormProdSup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdListage.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProdListage.cs" />
     <Compile Include="FormProdListage.Designer.cs">
       <DependentUpon>FormProdListage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfilModif.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProfilModif.cs" />
     <Compile Include="FormProfilModif.Designer.cs">
       <DependentUpon>FormProfilModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfilAff.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FormProfilAff.cs" />
     <Compile Include="FormProfilAff.Designer.cs">
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
@@ -174,7 +148,6 @@
     </Compile>
     <Compile Include="Quote.cs" />
     <Compile Include="Status.cs" />
-    <Compile Include="test_papap.cs" />
     <Compile Include="Type.cs" />
     <EmbeddedResource Include="FormClientAjt.resx">
       <DependentUpon>FormClientAjt.cs</DependentUpon>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace AutoFact
 {
@@ -39,7 +40,7 @@ namespace AutoFact
         public override string ToString()
 
         {
-           return this.id+", "+this.libel;
+           return this.id+","+this.libel;
 
 
         }
@@ -134,7 +135,32 @@ namespace AutoFact
         }
         public bool update()
         {
-            int count=0;
+            int count;
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+
+
+
+
+                    conn.Open();
+                    string strSql = "UPDATE product SET libel = @libel, unitprice = @unitprice WHERE id =@oneid";
+
+
+                    cmd.Parameters.AddWithValue("@libel", libel);
+                    cmd.Parameters.AddWithValue("@oneid", id);
+                    cmd.Parameters.AddWithValue("@unitprice", unitprice);
+
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+
+                }
+            }
+
             return count != 0;
         }
     }

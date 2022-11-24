@@ -27,7 +27,33 @@ namespace AutoFact
         {
             ListProduct.DataSource = ManagerProduct.getAllProduct();
         }
-        public void ListProduct_SelectedIndexChanged(object sender, EventArgs e)
+      
+
+        private void butModif_Click(object sender, EventArgs e)
+        {
+            string[] idproduct = ListProduct.SelectedValue.ToString().Split(',');
+            foreach (Product theproduct in ManagerProduct.getAllProduct())
+            {
+
+                if (theproduct.getId() == Convert.ToInt32(idproduct[0]))
+                {
+                    theproduct.setLibel(txtLibel.Text);
+                   
+                    theproduct.setUnitprice(Convert.ToDouble(txtPrice.Text));
+                   
+                    if (theproduct.update())
+                    {
+                        this.Close();
+                        MessageBox.Show("Vous avez bien modifié le produit.");
+                    }
+                    else MessageBox.Show("Erreur.");
+                }
+
+
+            }
+        }
+
+        private void ListProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] theproduct = ListProduct.SelectedValue.ToString().Split(',');
 
@@ -40,13 +66,11 @@ namespace AutoFact
 
                     txtLibel.Text = oneproduct.getLibel();
                     txtPrice.Text = oneproduct.getUnitprice().ToString();
-                  
+
                 }
 
 
             }
-
         }
-
     }
 }

@@ -10,6 +10,7 @@ namespace AutoFact
     {
         private int id;
         private int _idcustomer;
+        private List<Invoiceline> invoicelines = new List<Invoiceline>();
         
 
         public Quote(int theid, int thecustomer)
@@ -28,6 +29,14 @@ namespace AutoFact
         public void setCustomers(int onecustomers)
         {
             this._idcustomer = onecustomers;
+        }
+        public void addInvoiceline(Invoiceline oneinvoice)
+        {
+            this.invoicelines.Add(oneinvoice);
+        }
+        public List<Invoiceline> getInvoicelines()
+        {
+            return this.invoicelines;
         }
         
     }
