@@ -45,6 +45,7 @@ namespace AutoFact
 
         }
 
+
         public static Product get(int id)
         {
             Product product = null;

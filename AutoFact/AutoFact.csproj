@@ -157,6 +157,12 @@
     </Compile>
     <Compile Include="Interface1.cs" />
     <Compile Include="Invoiceline.cs" />
+    <Compile Include="Models\affichertype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\affichertype.Designer.cs">
+      <DependentUpon>affichertype.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManagerInvoiceline.cs" />
     <Compile Include="Models\ManagerProfile.cs" />
     <Compile Include="Models\ManagerQuote.cs" />
@@ -218,12 +224,16 @@
     <EmbeddedResource Include="FormProfilAff.resx">
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Models\affichertype.resx">
+      <DependentUpon>affichertype.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

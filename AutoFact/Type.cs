@@ -18,6 +18,13 @@ namespace AutoFact
             this.id = theid;
             this.libel = thelibel.Trim();
         }
+        public override string ToString()
+
+        {
+            return this.id + "," + this.libel;
+
+
+        }
         public int getId()
         {
             return this.id;
