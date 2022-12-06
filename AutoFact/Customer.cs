@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AutoFact
 {
-     public class Customer : Interface1
+     public class Customer 
     {
         private int id;
         private string name;

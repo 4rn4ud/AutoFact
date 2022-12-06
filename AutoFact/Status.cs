@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Status
+     class Status 
     {
         private DateTime date;
         private int _idquote;

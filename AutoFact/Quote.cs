@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Quote
+     class Quote : Interface1
     {
         private int id;
         private int _idcustomer;
@@ -39,7 +40,41 @@ namespace AutoFact
         {
             return this.invoicelines;
         }
+
+        public bool insert()
+        {
+            int count;
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+
+
+
+
+                    conn.Open();
+                    string strSql = "INSERT INTO[quote] ([idcustomers]) " +
+                        "VALUES(@idcustomers)";
+
+                    cmd.Parameters.AddWithValue("@idcustomers",_idcustomer );
+                    
+
+
+
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+
+                }
+            }
+
+            return count != 0;
+        }
         
        
+
+
     }
 }

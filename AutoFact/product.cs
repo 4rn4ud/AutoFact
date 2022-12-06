@@ -14,7 +14,7 @@ namespace AutoFact
 {
 
 
-    class Product : Interface1
+    class Product 
 
     {
         private int id;

@@ -38,6 +38,7 @@
             this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.butCreate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +84,7 @@
             this.colQuantity,
             this.colProd,
             this.colPromo});
-            this.dataGridView1.Location = new System.Drawing.Point(195, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(193, 302);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(462, 205);
             this.dataGridView1.TabIndex = 6;
@@ -110,11 +111,22 @@
             // 
             this.productBindingSource.DataSource = typeof(AutoFact.Product);
             // 
+            // butCreate
+            // 
+            this.butCreate.Location = new System.Drawing.Point(712, 564);
+            this.butCreate.Name = "butCreate";
+            this.butCreate.Size = new System.Drawing.Size(75, 23);
+            this.butCreate.TabIndex = 7;
+            this.butCreate.Text = "Créer";
+            this.butCreate.UseVisualStyleBackColor = true;
+            this.butCreate.Click += new System.EventHandler(this.butCreate_Click);
+            // 
             // FormDocAjt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.butCreate);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listType);
             this.Controls.Add(this.labStatus);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
         private System.Windows.Forms.DataGridViewComboBoxColumn colProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPromo;
+        private System.Windows.Forms.Button butCreate;
     }
 }

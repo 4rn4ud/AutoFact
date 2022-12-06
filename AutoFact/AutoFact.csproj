@@ -70,7 +70,6 @@
     <Compile Include="Credit.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
-    <Compile Include="DbContext.cs" />
     <Compile Include="FormClientAjt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +155,7 @@
       <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface1.cs" />
+    <Compile Include="interface2.cs" />
     <Compile Include="Invoiceline.cs" />
     <Compile Include="Models\affichertype.cs">
       <SubType>Form</SubType>

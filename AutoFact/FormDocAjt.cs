@@ -3,11 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Xml.Linq;
 
 namespace AutoFact
 {
@@ -27,7 +30,12 @@ namespace AutoFact
         {
             listCust.DataSource = ManagerCustomers.getAllCustomer();
             listType.DataSource = ManagerType.getAllType();
-            colProd.DataSource = ManagerProduct.getAllProduct();
+            
+            foreach(Product p in ManagerProduct.getAllProduct())
+            {
+                colProd.Items.Add(p.ToString());
+              
+            }
 
         }
 
@@ -44,15 +52,47 @@ namespace AutoFact
 
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-          /*if (e.Exception.Message == "DataGridViewComboBoxCell value is not valid.")
-           {
-               object value = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-               if (!((DataGridViewComboBoxColumn)dataGridView1.Columns[e.ColumnIndex]).Items.Contains(value))
-               {
-                   ((DataGridViewComboBoxColumn)dataGridView1.Columns[e.ColumnIndex]).Items.Add(value);
-                   e.ThrowException = false;
-               }
-           }*/
+          
         }
+        public void colProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void butCreate_Click(object sender, EventArgs e)
+        {
+            int nbligne = this.dataGridView1.Rows.Count;
+            nbligne -= 1;
+
+
+            //last_insert_rowid()
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+
+                    conn.Open();
+                    string strSql = "select last_insert_rowid(); ";
+                   
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+
+
+
+                }
+            }
+            return count != 0;
+        }
+
+    }
+
+
+
+
+
+}
     }
 }
