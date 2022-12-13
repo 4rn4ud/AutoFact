@@ -60,7 +60,18 @@ namespace AutoFact
         }
 
         private void butCreate_Click(object sender, EventArgs e)
+
         {
+            string[] customers = listCust.SelectedValue.ToString().Split(',');
+            Quote thequote = new Quote(Convert.ToInt32(customers[0]));
+            if (thequote.insert())
+            {
+
+                MessageBox.Show("1 ok");
+
+            }
+            else MessageBox.Show("Vous n'avez pas reussie a crée la facture.");
+
             int nbligne = this.dataGridView1.Rows.Count;
             nbligne -= 1;
 
@@ -72,19 +83,18 @@ namespace AutoFact
                 {
 
                     conn.Open();
-                    string strSql = "select last_insert_rowid(); ";
-                   
+                    string strSql = "select last_insert_rowid(); ";                   
                     cmd.CommandText = strSql;
                     cmd.Connection = conn;
-                    count = cmd.ExecuteNonQuery();
+                    int dernierid = cmd.ExecuteNonQuery();
                     conn.Close();
-
+                    MessageBox.Show(dernierid.ToString());
 
 
 
                 }
             }
-            return count != 0;
+            
         }
 
     }
@@ -94,5 +104,5 @@ namespace AutoFact
 
 
 }
-    }
-}
+    
+

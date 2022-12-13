@@ -12,8 +12,15 @@ namespace AutoFact
         private int id;
         private int _idcustomer;
         private List<Invoiceline> invoicelines = new List<Invoiceline>();
-        
 
+
+
+        public Quote(int thecustomer)
+        {
+            
+            this._idcustomer = thecustomer;
+            this.invoicelines = new List<Invoiceline>();
+        }
         public Quote(int theid, int thecustomer)
         {
             this.id = theid;

@@ -37,8 +37,9 @@
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.butCreate = new System.Windows.Forms.Button();
+            this.datequote = new System.Windows.Forms.DateTimePicker();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,10 +108,6 @@
             this.colPromo.HeaderText = "Promotion";
             this.colPromo.Name = "colPromo";
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(AutoFact.Product);
-            // 
             // butCreate
             // 
             this.butCreate.Location = new System.Drawing.Point(712, 564);
@@ -121,11 +118,23 @@
             this.butCreate.UseVisualStyleBackColor = true;
             this.butCreate.Click += new System.EventHandler(this.butCreate_Click);
             // 
+            // datequote
+            // 
+            this.datequote.Location = new System.Drawing.Point(96, 192);
+            this.datequote.Name = "datequote";
+            this.datequote.Size = new System.Drawing.Size(200, 20);
+            this.datequote.TabIndex = 8;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(AutoFact.Product);
+            // 
             // FormDocAjt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.datequote);
             this.Controls.Add(this.butCreate);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listType);
@@ -155,5 +164,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPromo;
         private System.Windows.Forms.Button butCreate;
+        private System.Windows.Forms.DateTimePicker datequote;
     }
 }
