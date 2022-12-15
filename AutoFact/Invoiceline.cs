@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,19 +9,21 @@ namespace AutoFact
 {
      class Invoiceline
      {
+        private int _idproduct;
+        private int _idquote;
         private int quantity;
         private int promotion;
-        private int _idquote;
-        private int _productId;
         private double unitprice;
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
 
-        public Invoiceline(int thequantity,int thepromotion, int thequote, int productId, double theunitprice)
+        public Invoiceline(int productId, int thequote, int thequantity,int thepromotion, double theunitprice)
         {
             this.quantity = thequantity;
             this.promotion = thepromotion;
             this._idquote = thequote;
-            this._productId = productId;
+            this._idproduct = productId;
             this.unitprice = theunitprice;
             
         }
@@ -47,7 +50,7 @@ namespace AutoFact
       
         public int getProduct()
         {
-            return this._productId;
+            return this._idproduct;
         }
         public double getUnitprice()
         {
@@ -56,6 +59,26 @@ namespace AutoFact
         public void setUnitPrice(double oneunitprice)
         {
             this.unitprice=oneunitprice;
+        }
+        public bool insert()
+        {
+            int count;
+
+            conn.Open();
+            string strSql = "INSERT INTO[invoiceline] ([idproduct],[idquote],[quantity],[promotion],[unitprice]) " +
+                "VALUES(@idproduct,@idquote,@quantity,@promotion,@unitprice)";
+
+
+            cmd.Parameters.AddWithValue("@idproduct", _idproduct);
+            cmd.Parameters.AddWithValue("@idquote", _idquote);
+            cmd.Parameters.AddWithValue("@quantity", quantity);
+            cmd.Parameters.AddWithValue("@promotion", promotion);
+            cmd.Parameters.AddWithValue("@unitprice", unitprice);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+            conn.Close();
+            return count != 0;
         }
      }
 }

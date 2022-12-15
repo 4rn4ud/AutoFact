@@ -14,12 +14,14 @@ namespace AutoFact
 {
 
 
-    class Product 
+    class Product
 
     {
         private int id;
         private string libel;
         private double unitprice;
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
 
         public Product(string thelibel, double theunitprice)
@@ -40,43 +42,13 @@ namespace AutoFact
         public override string ToString()
 
         {
-           return this.id+","+this.libel;
+            return this.id + "," + this.libel;
 
 
         }
 
 
-        public static Product get(int id)
-        {
-            Product product = null;
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand())
-                {
-                    conn.Open();
 
-                    cmd.CommandText = "SELECT * FROM product WHERE id = @id";
-                    cmd.Connection = conn;
-                    cmd.Parameters.Add(new SQLiteParameter("@id", id));
-
-                    using (SQLiteDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            product = new Product(
-                                Convert.ToInt32(dr["id"]),
-                                dr["libel"].ToString(),
-                                Convert.ToInt32(dr["unitprice"])
-                            );
-                            break;
-                        }
-                    }
-
-                    conn.Close();
-                }
-            }
-            return product;
-        }
 
         public int getId()
         {
@@ -106,61 +78,35 @@ namespace AutoFact
         public bool insert()
         {
             int count;
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand())
-                {
+
+            conn.Open();
+            string strSql = "INSERT INTO[product] ([libel],[unitprice]) " +
+                "VALUES(@libel,@unitprice)";
+
+            cmd.Parameters.AddWithValue("@libel", libel);
+            cmd.Parameters.AddWithValue("@unitprice", unitprice);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+            conn.Close();
 
 
 
-
-                    conn.Open();
-                    string strSql = "INSERT INTO[product] ([libel],[unitprice]) " +
-                        "VALUES(@libel,@unitprice)";
-
-                    cmd.Parameters.AddWithValue("@libel", libel);
-                    cmd.Parameters.AddWithValue("@unitprice", unitprice);
-
-
-
-                    cmd.CommandText = strSql;
-                    cmd.Connection = conn;
-                    count = cmd.ExecuteNonQuery();
-                    conn.Close();
-
-
-                }
-            }
 
             return count != 0;
         }
         public bool update()
         {
             int count;
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand())
-                {
-
-
-
-
-                    conn.Open();
-                    string strSql = "UPDATE product SET libel = @libel, unitprice = @unitprice WHERE id =@oneid";
-
-
-                    cmd.Parameters.AddWithValue("@libel", libel);
-                    cmd.Parameters.AddWithValue("@oneid", id);
-                    cmd.Parameters.AddWithValue("@unitprice", unitprice);
-
-                    cmd.CommandText = strSql;
-                    cmd.Connection = conn;
-                    count = cmd.ExecuteNonQuery();
-                    conn.Close();
-
-
-                }
-            }
+            conn.Open();
+            string strSql = "UPDATE product SET libel = @libel, unitprice = @unitprice WHERE id =@oneid";
+            cmd.Parameters.AddWithValue("@libel", libel);
+            cmd.Parameters.AddWithValue("@oneid", id);
+            cmd.Parameters.AddWithValue("@unitprice", unitprice);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+            conn.Close();
 
             return count != 0;
         }

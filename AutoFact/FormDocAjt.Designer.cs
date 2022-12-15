@@ -33,14 +33,14 @@
             this.LabCust = new System.Windows.Forms.Label();
             this.labStatus = new System.Windows.Forms.Label();
             this.listType = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datainvoiceline = new System.Windows.Forms.DataGridView();
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.butCreate = new System.Windows.Forms.Button();
             this.datequote = new System.Windows.Forms.DateTimePicker();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datainvoiceline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,20 +78,20 @@
             this.listType.Size = new System.Drawing.Size(121, 21);
             this.listType.TabIndex = 5;
             // 
-            // dataGridView1
+            // datainvoiceline
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datainvoiceline.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datainvoiceline.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colQuantity,
             this.colProd,
             this.colPromo});
-            this.dataGridView1.Location = new System.Drawing.Point(193, 302);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(462, 205);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.datainvoiceline.Location = new System.Drawing.Point(162, 303);
+            this.datainvoiceline.Name = "datainvoiceline";
+            this.datainvoiceline.Size = new System.Drawing.Size(462, 205);
+            this.datainvoiceline.TabIndex = 6;
+            this.datainvoiceline.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.datainvoiceline.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.datainvoiceline.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // colQuantity
             // 
@@ -136,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.datequote);
             this.Controls.Add(this.butCreate);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datainvoiceline);
             this.Controls.Add(this.listType);
             this.Controls.Add(this.labStatus);
             this.Controls.Add(this.LabCust);
@@ -145,7 +145,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
             this.Load += new System.EventHandler(this.FormDocAjt_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datainvoiceline)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,7 +158,7 @@
         private System.Windows.Forms.Label LabCust;
         private System.Windows.Forms.Label labStatus;
         private System.Windows.Forms.ComboBox listType;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datainvoiceline;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
         private System.Windows.Forms.DataGridViewComboBoxColumn colProd;

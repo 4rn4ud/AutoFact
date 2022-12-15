@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Quote : Interface1
+    class Quote 
     {
         private int id;
         private int _idcustomer;
         private List<Invoiceline> invoicelines = new List<Invoiceline>();
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
 
 
         public Quote(int thecustomer)
         {
-            
+
             this._idcustomer = thecustomer;
             this.invoicelines = new List<Invoiceline>();
         }
@@ -48,39 +50,34 @@ namespace AutoFact
             return this.invoicelines;
         }
 
-        public bool insert()
+        public int insert()
         {
-            int count;
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            int lastid = new int();
+            conn.Open();
+            string strSql = "INSERT INTO[quote] ([idcustomers]) VALUES(@idcustomers);SELECT last_insert_rowid()";
+
+            cmd.Parameters.AddWithValue("@idcustomers", _idcustomer);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+
+            SQLiteDataReader command = cmd.ExecuteReader();
+
+            if (command.Read())
             {
-                using (SQLiteCommand cmd = new SQLiteCommand())
-                {
-
-
-
-
-                    conn.Open();
-                    string strSql = "INSERT INTO[quote] ([idcustomers]) " +
-                        "VALUES(@idcustomers)";
-
-                    cmd.Parameters.AddWithValue("@idcustomers",_idcustomer );
-                    
-
-
-
-                    cmd.CommandText = strSql;
-                    cmd.Connection = conn;
-                    count = cmd.ExecuteNonQuery();
-                    conn.Close();
-
-
-                }
+                lastid = command.GetInt32(0);
             }
 
-            return count != 0;
+            conn.Close();
+
+            return lastid;
+
+
+
+
+
         }
-        
-       
+
+
 
 
     }

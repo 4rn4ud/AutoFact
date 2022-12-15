@@ -46,6 +46,7 @@
             this.dataGridQuot.Name = "dataGridQuot";
             this.dataGridQuot.Size = new System.Drawing.Size(589, 150);
             this.dataGridQuot.TabIndex = 0;
+            this.dataGridQuot.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridQuot_CellContentClick);
             // 
             // colidquote
             // 

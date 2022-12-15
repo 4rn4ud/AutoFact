@@ -103,5 +103,11 @@ namespace AutoFact
             FormInformationC InformationC = new FormInformationC();
             InformationC.Show();
         }
+
+        private void buttFollowQuote_Click(object sender, EventArgs e)
+        {
+            FormDocSuivis docSuivis = new FormDocSuivis();
+            docSuivis.Show();
+        }
     }
 }

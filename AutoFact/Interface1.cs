@@ -8,8 +8,7 @@ namespace AutoFact
 {
     internal interface Interface1
     {
-       // bool insert();
-        //bool update();
+       
     }
     
 }

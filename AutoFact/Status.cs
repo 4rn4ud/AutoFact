@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +13,10 @@ namespace AutoFact
         private DateTime date;
         private int _idquote;
         private int _idtype;
-        private Type _type;
-        
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
+
+
 
 
 
@@ -22,6 +26,13 @@ namespace AutoFact
             this._idquote = thequote;
             this._idtype = thetype;
            
+
+        }
+        public override string ToString()
+
+        {
+            return this._idquote;
+
 
         }
         public DateTime getDate() 
@@ -41,8 +52,38 @@ namespace AutoFact
         {
             return this._idtype;
         }
+        public string getTypeLibel()
+        {
+            string thetypelibel ="";
+            foreach (Type thetype in ManagerType.getAllType())
+            {
+                if (thetype.getId() == this._idtype)
+                {
+                    thetypelibel = thetype.getLibel();
+                }
+            }
+            return thetypelibel;
+        }
          
-       
+       public bool insert()
+        {
+            int count;
+
+            conn.Open();
+            string strSql = "INSERT INTO[status] ([date],[idquote],[idtype]) " +
+                "VALUES(@date,@idquote,@idtype)";
+
+
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@idquote", _idquote);
+            cmd.Parameters.AddWithValue("@idtype", _idtype);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count != 0;
+        }
         
         
     }

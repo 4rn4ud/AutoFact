@@ -28,12 +28,15 @@ namespace AutoFact
 
         private void FormDocListage_Load(object sender, EventArgs e)
         {
-            foreach (Status onestatus in ManagerStatus.getAllStatus())
+            foreach (Status onestatus in ManagerStatus.getStatus())
             {
-                dataGridQuot.Rows.Add(onestatus.getidQuote(),  onestatus.getType(), onestatus.getDate());
+                dataGridQuot.Rows.Add(onestatus.getidQuote(),  onestatus.getTypeLibel(), onestatus.getDate());
             }
         }
 
-      
+        private void dataGridQuot_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -62,46 +62,58 @@ namespace AutoFact
         private void butCreate_Click(object sender, EventArgs e)
 
         {
+            
             string[] customers = listCust.SelectedValue.ToString().Split(',');
+            string[] type = listType.SelectedValue.ToString().Split(',');
             Quote thequote = new Quote(Convert.ToInt32(customers[0]));
-            if (thequote.insert())
+            Status thestatus = new Status(datequote.Value, thequote.insert(), Convert.ToInt32(type[0]));
+            if (thestatus.insert())
             {
-
-                MessageBox.Show("1 ok");
+                MessageBox.Show("status ok");
+            }
+            else
+            {
+                MessageBox.Show("status bug");
 
             }
-            else MessageBox.Show("Vous n'avez pas reussie a crée la facture.");
 
-            int nbligne = this.dataGridView1.Rows.Count;
+
+            
+            int nbligne = this.datainvoiceline.Rows.Count;           
             nbligne -= 1;
-
-
-            //last_insert_rowid()
-            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
-            {
-                using (SQLiteCommand cmd = new SQLiteCommand())
+            for (int i = 0; i < nbligne; i++)
+            {   
+                string[] oneproduct = datainvoiceline.Rows[i].Cells[1].Value.ToString().Split(',');
+                foreach (Product theproduct in ManagerProduct.getAllProduct())
                 {
-
-                    conn.Open();
-                    string strSql = "select last_insert_rowid(); ";                   
-                    cmd.CommandText = strSql;
-                    cmd.Connection = conn;
-                    int dernierid = cmd.ExecuteNonQuery();
-                    conn.Close();
-                    MessageBox.Show(dernierid.ToString());
-
+                    if(theproduct.getId() == Convert.ToInt32(oneproduct[0]))
+                    {
+                        Product theproductrows = theproduct;
+                        Invoiceline theinvoiceline = new Invoiceline(theproductrows.getId(), thestatus.getidQuote(), Convert.ToInt32(datainvoiceline.Rows[i].Cells[0].Value), Convert.ToInt32(datainvoiceline.Rows[i].Cells[2].Value), theproductrows.getUnitprice());
+                        
+                        if (theinvoiceline.insert())
+                        {
+                            MessageBox.Show("ligne ok");
+                        }
+                        else
+                        {
+                            MessageBox.Show("ligne pa");
+                        }
+                    }
 
 
                 }
+
+
             }
-            
+
+
+
+
+
         }
 
     }
-
-
-
-
 
 }
     

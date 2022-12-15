@@ -46,6 +46,7 @@ namespace AutoFact
             this.BtnVisuProf = new System.Windows.Forms.Button();
             this.BtnModifProf = new System.Windows.Forms.Button();
             this.BtnInformation = new System.Windows.Forms.Button();
+            this.buttFollowQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,12 +200,23 @@ namespace AutoFact
             this.BtnInformation.UseVisualStyleBackColor = true;
             this.BtnInformation.Click += new System.EventHandler(this.BtnInformation_Click);
             // 
+            // buttFollowQuote
+            // 
+            this.buttFollowQuote.Location = new System.Drawing.Point(467, 507);
+            this.buttFollowQuote.Name = "buttFollowQuote";
+            this.buttFollowQuote.Size = new System.Drawing.Size(135, 23);
+            this.buttFollowQuote.TabIndex = 20;
+            this.buttFollowQuote.Text = "Suivis de facture";
+            this.buttFollowQuote.UseVisualStyleBackColor = true;
+            this.buttFollowQuote.Click += new System.EventHandler(this.buttFollowQuote_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.buttFollowQuote);
             this.Controls.Add(this.BtnInformation);
             this.Controls.Add(this.BtnModifProf);
             this.Controls.Add(this.BtnVisuProf);
@@ -246,6 +258,7 @@ namespace AutoFact
         private System.Windows.Forms.Button BtnVisuProf;
         private System.Windows.Forms.Button BtnModifProf;
         private System.Windows.Forms.Button BtnInformation;
+        private System.Windows.Forms.Button buttFollowQuote;
     }
 }
 

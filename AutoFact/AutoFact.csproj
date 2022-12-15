@@ -106,6 +106,12 @@
     <Compile Include="FormDocListage.Designer.cs">
       <DependentUpon>FormDocListage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDocSuivis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocSuivis.Designer.cs">
+      <DependentUpon>FormDocSuivis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInformationC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,7 @@
     <Compile Include="Interface1.cs" />
     <Compile Include="interface2.cs" />
     <Compile Include="Invoiceline.cs" />
+    <Compile Include="ManageLastId.cs" />
     <Compile Include="Models\affichertype.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocListage.resx">
       <DependentUpon>FormDocListage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocSuivis.resx">
+      <DependentUpon>FormDocSuivis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformationC.resx">
       <DependentUpon>FormInformationC.cs</DependentUpon>

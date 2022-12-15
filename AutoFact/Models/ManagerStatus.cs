@@ -36,5 +36,26 @@ namespace AutoFact.Models
             return list;
 
         }
+        public static List<Status> getStatus()
+        {
+            List<Status> list = new List<Status>();
+            StringBuilder query = new StringBuilder();
+            query.Append("select * from status group by idquote having max(idtype)");
+
+            cmd = new SQLiteCommand(query.ToString(), conn);
+
+            conn.Open();
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    list.Add(new Status(Convert.ToDateTime(dr["date"]), Convert.ToInt32(dr["idquote"]), Convert.ToInt32(dr["idtype"])));
+                }
+            }
+            conn.Close();
+            return list;
+
+        }
     }
 }
