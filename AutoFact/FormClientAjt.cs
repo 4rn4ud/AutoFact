@@ -56,6 +56,35 @@ namespace AutoFact
 
         
         }
-            
+
+        private void TxtCustPostal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+      
+
+        private void TxtCustPostal_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
+
+        }
+
+        private void TxtCustTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtCustTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
+        }
     }
 }

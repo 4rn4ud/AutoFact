@@ -28,7 +28,8 @@ namespace AutoFact
         private void FormClientModif_Load(object sender, EventArgs e)
         {
             ListCustomers.DataSource = ManagerCustomers.getAllCustomer();
-
+          
+            
 
 
         }
@@ -91,6 +92,24 @@ namespace AutoFact
 
             }
 
+        }
+
+        private void TxtCustTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
+        }
+
+        private void TxtCustPostal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
         }
     }
 }

@@ -155,6 +155,7 @@
             this.TxtCustTel.Name = "TxtCustTel";
             this.TxtCustTel.Size = new System.Drawing.Size(76, 20);
             this.TxtCustTel.TabIndex = 26;
+            this.TxtCustTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCustTel_KeyPress);
             // 
             // TxtCustPostal
             // 
@@ -163,6 +164,7 @@
             this.TxtCustPostal.Name = "TxtCustPostal";
             this.TxtCustPostal.Size = new System.Drawing.Size(76, 20);
             this.TxtCustPostal.TabIndex = 25;
+            this.TxtCustPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCustPostal_KeyPress);
             // 
             // TxtCustCompany
             // 

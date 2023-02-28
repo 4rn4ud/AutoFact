@@ -28,13 +28,12 @@ namespace AutoFact
            
 
         }
-        public override string ToString()
+      /*  public override string ToString()
 
         {
             return this._idquote;
 
-
-        }
+        }*/
         public DateTime getDate() 
         { 
             return this.date; 

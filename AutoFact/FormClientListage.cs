@@ -16,9 +16,7 @@ namespace AutoFact
 {
     public partial class FormClientListage : Form
     {
-        SqlDataAdapter sda;
-        SqlCommandBuilder scb;
-        DataTable dt;
+       
         
         public FormClientListage()
         {

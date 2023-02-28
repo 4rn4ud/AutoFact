@@ -105,6 +105,8 @@
             this.TxtCustPostal.Name = "TxtCustPostal";
             this.TxtCustPostal.Size = new System.Drawing.Size(76, 20);
             this.TxtCustPostal.TabIndex = 9;
+            this.TxtCustPostal.TextChanged += new System.EventHandler(this.TxtCustPostal_TextChanged);
+            this.TxtCustPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCustPostal_KeyPress_1);
             // 
             // TxtCustTel
             // 
@@ -113,6 +115,8 @@
             this.TxtCustTel.Name = "TxtCustTel";
             this.TxtCustTel.Size = new System.Drawing.Size(76, 20);
             this.TxtCustTel.TabIndex = 10;
+            this.TxtCustTel.TextChanged += new System.EventHandler(this.TxtCustTel_TextChanged);
+            this.TxtCustTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCustTel_KeyPress);
             // 
             // TxtCustMail
             // 
