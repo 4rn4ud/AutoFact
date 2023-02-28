@@ -58,6 +58,7 @@
             this.boxTel.Name = "boxTel";
             this.boxTel.Size = new System.Drawing.Size(100, 20);
             this.boxTel.TabIndex = 29;
+            this.boxTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxTel_KeyPress);
             // 
             // boxCity
             // 
@@ -72,6 +73,7 @@
             this.boxPostalCode.Name = "boxPostalCode";
             this.boxPostalCode.Size = new System.Drawing.Size(100, 20);
             this.boxPostalCode.TabIndex = 27;
+            this.boxPostalCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxPostalCode_KeyPress);
             // 
             // BoxAdress
             // 

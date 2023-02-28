@@ -42,5 +42,19 @@ namespace AutoFact
             else MessageBox.Show("Erreur.");
             
         }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
+        }
     }
 }

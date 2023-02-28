@@ -72,5 +72,14 @@ namespace AutoFact
 
             }
         }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
+        }
     }
 }

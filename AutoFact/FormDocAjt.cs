@@ -112,7 +112,24 @@ namespace AutoFact
 
 
         }
+        private void colQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            {
+                // Empêche la saisie de caractères autres que des chiffres
+                e.Handled = true;
+            }
 
+        }
+        private void datainvoiceline_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void datainvoiceline_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            
+        }
     }
 
 }

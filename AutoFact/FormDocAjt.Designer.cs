@@ -34,12 +34,12 @@
             this.labStatus = new System.Windows.Forms.Label();
             this.listType = new System.Windows.Forms.ComboBox();
             this.datainvoiceline = new System.Windows.Forms.DataGridView();
-            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.butCreate = new System.Windows.Forms.Button();
             this.datequote = new System.Windows.Forms.DateTimePicker();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datainvoiceline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -91,22 +91,9 @@
             this.datainvoiceline.TabIndex = 6;
             this.datainvoiceline.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.datainvoiceline.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.datainvoiceline.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.datainvoiceline_CellValidating);
             this.datainvoiceline.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Quantité:";
-            this.colQuantity.Name = "colQuantity";
-            // 
-            // colProd
-            // 
-            this.colProd.HeaderText = "Produit";
-            this.colProd.Name = "colProd";
-            // 
-            // colPromo
-            // 
-            this.colPromo.HeaderText = "Promotion";
-            this.colPromo.Name = "colPromo";
+            this.datainvoiceline.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datainvoiceline_KeyPress);
             // 
             // butCreate
             // 
@@ -128,6 +115,21 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(AutoFact.Product);
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.HeaderText = "Quantité:";
+            this.colQuantity.Name = "colQuantity";
+            // 
+            // colProd
+            // 
+            this.colProd.HeaderText = "Produit";
+            this.colProd.Name = "colProd";
+            // 
+            // colPromo
+            // 
+            this.colPromo.HeaderText = "Promotion:";
+            this.colPromo.Name = "colPromo";
             // 
             // FormDocAjt
             // 
@@ -160,10 +162,10 @@
         private System.Windows.Forms.ComboBox listType;
         private System.Windows.Forms.DataGridView datainvoiceline;
         private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.Button butCreate;
+        private System.Windows.Forms.DateTimePicker datequote;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
         private System.Windows.Forms.DataGridViewComboBoxColumn colProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPromo;
-        private System.Windows.Forms.Button butCreate;
-        private System.Windows.Forms.DateTimePicker datequote;
     }
 }

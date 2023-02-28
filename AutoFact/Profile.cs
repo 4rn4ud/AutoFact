@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AutoFact
 {
@@ -69,6 +71,10 @@ namespace AutoFact
         {
             return this.email;
         }
+        public void setEmail(string onemail)
+        {
+            this.email = onemail;
+        }
 
         public void setCompanyname(string onecompanyname)
         {
@@ -97,6 +103,39 @@ namespace AutoFact
         public void setSiren(int onesiren)
         {
             this.siren= onesiren;
+        }
+        public bool update()
+        {
+            int count;
+            using (SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db"))
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand())
+                {
+
+                    conn.Open();
+                    string strSql = "UPDATE profile SET companyname = @companyname, postalcode =@postalcode, adress = @adress, city =@city, email = @email, tel = @tel, siren= @siren WHERE id =@oneid";
+                    cmd.Parameters.AddWithValue("@oneid", id);
+                    cmd.Parameters.AddWithValue("@companyname", companyname);
+                    cmd.Parameters.AddWithValue("@postalcode", postalcode);
+                    cmd.Parameters.AddWithValue("@adress", adress);
+                    cmd.Parameters.AddWithValue("@city", city);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@tel", tel);
+                    cmd.Parameters.AddWithValue("@siren", siren);
+
+
+
+                    cmd.CommandText = strSql;
+                    cmd.Connection = conn;
+                    count = cmd.ExecuteNonQuery();
+                    conn.Close();
+
+
+
+
+                }
+            }
+            return count != 0;
         }
     }
 }
