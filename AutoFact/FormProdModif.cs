@@ -55,31 +55,12 @@ namespace AutoFact
 
         private void ListProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] theproduct = ListProduct.SelectedValue.ToString().Split(',');
 
-
-            foreach (Product oneproduct in ManagerProduct.getAllProduct())
-            {
-
-                if (oneproduct.getId() == Convert.ToInt32(theproduct[0]))
-                {
-
-                    txtLibel.Text = oneproduct.getLibel();
-                    txtPrice.Text = oneproduct.getUnitprice().ToString();
-
-                }
-
-
-            }
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
-            {
-                // Empêche la saisie de caractères autres que des chiffres
-                e.Handled = true;
-            }
+
         }
     }
 }
