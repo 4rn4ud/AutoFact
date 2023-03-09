@@ -30,7 +30,7 @@
         {
             this.ListQuote = new System.Windows.Forms.ComboBox();
             this.labQuote = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DateupdateStatus = new System.Windows.Forms.DateTimePicker();
             this.boxNewStatus = new System.Windows.Forms.ComboBox();
             this.labOldStatus = new System.Windows.Forms.Label();
             this.labNewStatus = new System.Windows.Forms.Label();
@@ -56,12 +56,12 @@
             this.labQuote.TabIndex = 1;
             this.labQuote.Text = "Documents:";
             // 
-            // dateTimePicker1
+            // DateupdateStatus
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(510, 213);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.DateupdateStatus.Location = new System.Drawing.Point(510, 213);
+            this.DateupdateStatus.Name = "DateupdateStatus";
+            this.DateupdateStatus.Size = new System.Drawing.Size(200, 20);
+            this.DateupdateStatus.TabIndex = 2;
             // 
             // boxNewStatus
             // 
@@ -97,6 +97,7 @@
             this.butChange.TabIndex = 7;
             this.butChange.Text = "Changer";
             this.butChange.UseVisualStyleBackColor = true;
+            this.butChange.Click += new System.EventHandler(this.butChange_Click);
             // 
             // boxOldStatus
             // 
@@ -118,7 +119,7 @@
             this.Controls.Add(this.labNewStatus);
             this.Controls.Add(this.labOldStatus);
             this.Controls.Add(this.boxNewStatus);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DateupdateStatus);
             this.Controls.Add(this.labQuote);
             this.Controls.Add(this.ListQuote);
             this.Name = "FormDocSuivis";
@@ -133,7 +134,7 @@
 
         private System.Windows.Forms.ComboBox ListQuote;
         private System.Windows.Forms.Label labQuote;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateupdateStatus;
         private System.Windows.Forms.ComboBox boxNewStatus;
         private System.Windows.Forms.Label labOldStatus;
         private System.Windows.Forms.Label labNewStatus;

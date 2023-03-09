@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Diagnostics;
-//using System.Windows.Forms;
 
 
 namespace AutoFact
