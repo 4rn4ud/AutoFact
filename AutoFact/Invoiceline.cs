@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,19 +8,23 @@ using System.Threading.Tasks;
 namespace AutoFact
 {
      class Invoiceline
-    {
+     {
+        private int _idproduct;
+        private int _idquote;
         private int quantity;
         private int promotion;
-        private Quote _command;
-        private Product _product;
+        private double unitprice;
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
 
-        public Invoiceline(int thequantity,int thepromotion, Quote thecommand, Product theproduct)
+        public Invoiceline(int productId, int thequote, int thequantity,int thepromotion, double theunitprice)
         {
             this.quantity = thequantity;
             this.promotion = thepromotion;
-            this._command = thecommand;
-            this._product = theproduct;
+            this._idquote = thequote;
+            this._idproduct = productId;
+            this.unitprice = theunitprice;
             
         }
         public int getQuantity()
@@ -38,21 +43,42 @@ namespace AutoFact
         {
             this.promotion=thepromotion;
         }
-        public Quote getCommand()
+        public int getIdQuote()
         {
-            return this._command;
+            return this._idquote;
         }
-        public void setCommand(Quote onecommand)
+      
+        public int getProduct()
         {
-            this._command=onecommand;
+            return this._idproduct;
         }
-        public Product getProduct()
+        public double getUnitprice()
         {
-            return this._product;
+            return this.unitprice;
         }
-        public void setProduct(Product oneproduct)
+        public void setUnitPrice(double oneunitprice)
         {
-            this._product = oneproduct;
+            this.unitprice=oneunitprice;
         }
-    }
+        public bool insert()
+        {
+            int count;
+
+            conn.Open();
+            string strSql = "INSERT INTO[invoiceline] ([idproduct],[idquote],[quantity],[promotion],[unitprice]) " +
+                "VALUES(@idproduct,@idquote,@quantity,@promotion,@unitprice)";
+
+
+            cmd.Parameters.AddWithValue("@idproduct", _idproduct);
+            cmd.Parameters.AddWithValue("@idquote", _idquote);
+            cmd.Parameters.AddWithValue("@quantity", quantity);
+            cmd.Parameters.AddWithValue("@promotion", promotion);
+            cmd.Parameters.AddWithValue("@unitprice", unitprice);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+            conn.Close();
+            return count != 0;
+        }
+     }
 }

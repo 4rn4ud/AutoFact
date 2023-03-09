@@ -18,6 +18,13 @@ namespace AutoFact
             this.id = theid;
             this.libel = thelibel.Trim();
         }
+        public override string ToString()
+
+        {
+            return this.id + "," + this.libel;
+
+
+        }
         public int getId()
         {
             return this.id;
@@ -27,7 +34,8 @@ namespace AutoFact
             return this.libel;
         }
         public void SetLibel(string onelibel)
-        { this.libel = onelibel.Trim();
+        {
+            this.libel = onelibel.Trim();
         }
     }
 }

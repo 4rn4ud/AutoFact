@@ -1,6 +1,6 @@
-﻿namespace AutoFact
+﻿namespace AutoFact.Models
 {
-    partial class FormInformationC
+    partial class affichertype
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FormInformationC
+            // affichertype
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Name = "FormInformationC";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AutoFact";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "affichertype";
+            this.Text = "affichertype";
             this.ResumeLayout(false);
 
         }

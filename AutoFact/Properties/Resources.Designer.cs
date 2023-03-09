@@ -73,9 +73,9 @@ namespace AutoFact.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_AutoFact {
+        internal static System.Drawing.Bitmap logo_autofact1 {
             get {
-                object obj = ResourceManager.GetObject("logo_AutoFact", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_autofact1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace AutoFact.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_AutoFact1 {
+        internal static System.Drawing.Bitmap logo_autofact11 {
             get {
-                object obj = ResourceManager.GetObject("logo_AutoFact1", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_autofact11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,19 @@ namespace AutoFact.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo1 {
+        internal static System.Drawing.Bitmap logo_autofact12 {
             get {
-                object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_autofact12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_autofact13 {
+            get {
+                object obj = ResourceManager.GetObject("logo_autofact13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

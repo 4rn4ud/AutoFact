@@ -68,43 +68,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Credit.cs" />
-    <Compile Include="Customers.cs" />
-    <Compile Include="DbContext.cs" />
-    <Compile Include="FormClientA.cs">
+    <Compile Include="Customer.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="FormClientAjt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientA.Designer.cs">
-      <DependentUpon>FormClientA.cs</DependentUpon>
+    <Compile Include="FormClientAjt.Designer.cs">
+      <DependentUpon>FormClientAjt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClientM.cs">
+    <Compile Include="FormClientModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientM.Designer.cs">
-      <DependentUpon>FormClientM.cs</DependentUpon>
+    <Compile Include="FormClientModif.Designer.cs">
+      <DependentUpon>FormClientModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormClientV.cs">
+    <Compile Include="FormClientListage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientV.Designer.cs">
-      <DependentUpon>FormClientV.cs</DependentUpon>
+    <Compile Include="FormClientListage.Designer.cs">
+      <DependentUpon>FormClientListage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocumentA.cs">
+    <Compile Include="FormDocAjt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDocumentA.Designer.cs">
-      <DependentUpon>FormDocumentA.cs</DependentUpon>
+    <Compile Include="FormDocAjt.Designer.cs">
+      <DependentUpon>FormDocAjt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocumentM.cs">
+    <Compile Include="FormDocModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDocumentM.Designer.cs">
-      <DependentUpon>FormDocumentM.cs</DependentUpon>
+    <Compile Include="FormDocModif.Designer.cs">
+      <DependentUpon>FormDocModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDocumentV.cs">
+    <Compile Include="FormDocListage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDocumentV.Designer.cs">
-      <DependentUpon>FormDocumentV.cs</DependentUpon>
+    <Compile Include="FormDocListage.Designer.cs">
+      <DependentUpon>FormDocListage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDocSuivis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocSuivis.Designer.cs">
+      <DependentUpon>FormDocSuivis.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInformationC.cs">
       <SubType>Form</SubType>
@@ -112,117 +118,132 @@
     <Compile Include="FormInformationC.Designer.cs">
       <DependentUpon>FormInformationC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInformationP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormInformationP.Designer.cs">
-      <DependentUpon>FormInformationP.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrestationA.cs">
+    <Compile Include="FormProdAjt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrestationA.Designer.cs">
-      <DependentUpon>FormPrestationA.cs</DependentUpon>
+    <Compile Include="FormProdAjt.Designer.cs">
+      <DependentUpon>FormProdAjt.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrestationM.cs">
+    <Compile Include="FormProdModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrestationM.Designer.cs">
-      <DependentUpon>FormPrestationM.cs</DependentUpon>
+    <Compile Include="FormProdModif.Designer.cs">
+      <DependentUpon>FormProdModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrestationS.cs">
+    <Compile Include="FormProdSup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrestationS.Designer.cs">
-      <DependentUpon>FormPrestationS.cs</DependentUpon>
+    <Compile Include="FormProdSup.Designer.cs">
+      <DependentUpon>FormProdSup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPrestationV.cs">
+    <Compile Include="FormProdListage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPrestationV.Designer.cs">
-      <DependentUpon>FormPrestationV.cs</DependentUpon>
+    <Compile Include="FormProdListage.Designer.cs">
+      <DependentUpon>FormProdListage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfilM.cs">
+    <Compile Include="FormProfilModif.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProfilM.Designer.cs">
-      <DependentUpon>FormProfilM.cs</DependentUpon>
+    <Compile Include="FormProfilModif.Designer.cs">
+      <DependentUpon>FormProfilModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfilV.cs">
+    <Compile Include="FormProfilAff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProfilV.Designer.cs">
-      <DependentUpon>FormProfilV.cs</DependentUpon>
+    <Compile Include="FormProfilAff.Designer.cs">
+      <DependentUpon>FormProfilAff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface1.cs" />
+    <Compile Include="interface2.cs" />
     <Compile Include="Invoiceline.cs" />
+    <Compile Include="ManageLastId.cs" />
+    <Compile Include="Models\affichertype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\affichertype.Designer.cs">
+      <DependentUpon>affichertype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagerInvoiceline.cs" />
+    <Compile Include="Models\ManagerProfile.cs" />
+    <Compile Include="Models\ManagerQuote.cs" />
+    <Compile Include="Models\ManagerCustomers.cs" />
+    <Compile Include="Models\ManagerStatus.cs" />
+    <Compile Include="Models\ManagerProduct.cs" />
+    <Compile Include="Models\ManagerType.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="Profile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Quote.cs" />
     <Compile Include="Status.cs" />
-    <Compile Include="test_papap.cs" />
     <Compile Include="Type.cs" />
-    <EmbeddedResource Include="FormClientA.resx">
-      <DependentUpon>FormClientA.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientAjt.resx">
+      <DependentUpon>FormClientAjt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormClientM.resx">
-      <DependentUpon>FormClientM.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientModif.resx">
+      <DependentUpon>FormClientModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormClientV.resx">
-      <DependentUpon>FormClientV.cs</DependentUpon>
+    <EmbeddedResource Include="FormClientListage.resx">
+      <DependentUpon>FormClientListage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDocumentA.resx">
-      <DependentUpon>FormDocumentA.cs</DependentUpon>
+    <EmbeddedResource Include="FormDocAjt.resx">
+      <DependentUpon>FormDocAjt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDocumentM.resx">
-      <DependentUpon>FormDocumentM.cs</DependentUpon>
+    <EmbeddedResource Include="FormDocModif.resx">
+      <DependentUpon>FormDocModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDocumentV.resx">
-      <DependentUpon>FormDocumentV.cs</DependentUpon>
+    <EmbeddedResource Include="FormDocListage.resx">
+      <DependentUpon>FormDocListage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocSuivis.resx">
+      <DependentUpon>FormDocSuivis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformationC.resx">
       <DependentUpon>FormInformationC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInformationP.resx">
-      <DependentUpon>FormInformationP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrestationA.resx">
-      <DependentUpon>FormPrestationA.cs</DependentUpon>
+    <EmbeddedResource Include="FormProdAjt.resx">
+      <DependentUpon>FormProdAjt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrestationM.resx">
-      <DependentUpon>FormPrestationM.cs</DependentUpon>
+    <EmbeddedResource Include="FormProdModif.resx">
+      <DependentUpon>FormProdModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrestationS.resx">
-      <DependentUpon>FormPrestationS.cs</DependentUpon>
+    <EmbeddedResource Include="FormProdSup.resx">
+      <DependentUpon>FormProdSup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrestationV.resx">
-      <DependentUpon>FormPrestationV.cs</DependentUpon>
+    <EmbeddedResource Include="FormProdListage.resx">
+      <DependentUpon>FormProdListage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProfilM.resx">
-      <DependentUpon>FormProfilM.cs</DependentUpon>
+    <EmbeddedResource Include="FormProfilModif.resx">
+      <DependentUpon>FormProfilModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProfilV.resx">
-      <DependentUpon>FormProfilV.cs</DependentUpon>
+    <EmbeddedResource Include="FormProfilAff.resx">
+      <DependentUpon>FormProfilAff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\affichertype.resx">
+      <DependentUpon>affichertype.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -240,6 +261,11 @@
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </Content>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo_autofact1.png" />
+    <None Include="Resources\logoduprojet.png" />
+    <None Include="Resources\logoaf.png" />
+    <None Include="Resources\logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

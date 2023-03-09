@@ -1,25 +1,39 @@
-﻿using System;
+﻿using AutoFact.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoFact
 {
-     class Status
+     class Status 
     {
         private DateTime date;
-        private Quote _quote;
-        private Type _type;
+        private int _idquote;
+        private int _idtype;
+        SQLiteConnection conn = new SQLiteConnection("DataSource = ../../Resources/mydatabase.db");
+        SQLiteCommand cmd = new SQLiteCommand();
 
 
 
-        public Status(DateTime thedate, Quote thequote, Type thetype)
+
+
+        public Status(DateTime thedate, int thequote, int thetype)
         {
             this.date = thedate;
-            this._quote = thequote;
-            this._type = thetype;
+            this._idquote = thequote;
+            this._idtype = thetype;
+           
+
         }
+      /*  public override string ToString()
+
+        {
+            return this._idquote;
+
+        }*/
         public DateTime getDate() 
         { 
             return this.date; 
@@ -28,21 +42,48 @@ namespace AutoFact
         {
             this.date = onedate;
         }
-        public Quote getQuote()
+        public int getidQuote()
         {
-            return this._quote;
+            return this._idquote;
         }
-        public void setQuote(Quote onequote)
+
+        public int getType()
         {
-            this._quote = onequote;
+            return this._idtype;
         }
-        public Type getType()
+        public string getTypeLibel()
         {
-            return this._type;
+            string thetypelibel ="";
+            foreach (Type thetype in ManagerType.getAllType())
+            {
+                if (thetype.getId() == this._idtype)
+                {
+                    thetypelibel = thetype.getLibel();
+                }
+            }
+            return thetypelibel;
         }
-        public void setType(Type onetype)
+         
+       public bool insert()
         {
-            this._type = onetype;
+            int count;
+
+            conn.Open();
+            string strSql = "INSERT INTO[status] ([date],[idquote],[idtype]) " +
+                "VALUES(@date,@idquote,@idtype)";
+
+
+            cmd.Parameters.AddWithValue("@date", date);
+            cmd.Parameters.AddWithValue("@idquote", _idquote);
+            cmd.Parameters.AddWithValue("@idtype", _idtype);
+            cmd.CommandText = strSql;
+            cmd.Connection = conn;
+            count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count != 0;
         }
+        
+        
     }
 }
