@@ -34,12 +34,12 @@
             this.labStatus = new System.Windows.Forms.Label();
             this.listType = new System.Windows.Forms.ComboBox();
             this.datainvoiceline = new System.Windows.Forms.DataGridView();
-            this.butCreate = new System.Windows.Forms.Button();
-            this.datequote = new System.Windows.Forms.DateTimePicker();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colProd = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colPromo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.butCreate = new System.Windows.Forms.Button();
+            this.datequote = new System.Windows.Forms.DateTimePicker();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.datainvoiceline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -93,7 +93,23 @@
             this.datainvoiceline.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.datainvoiceline.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.datainvoiceline_CellValidating);
             this.datainvoiceline.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            this.datainvoiceline.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datainvoiceline_EditingControlShowing);
             this.datainvoiceline.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.datainvoiceline_KeyPress);
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.HeaderText = "Quantité:";
+            this.colQuantity.Name = "colQuantity";
+            // 
+            // colProd
+            // 
+            this.colProd.HeaderText = "Produit";
+            this.colProd.Name = "colProd";
+            // 
+            // colPromo
+            // 
+            this.colPromo.HeaderText = "Promotion:";
+            this.colPromo.Name = "colPromo";
             // 
             // butCreate
             // 
@@ -115,21 +131,6 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(AutoFact.Product);
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Quantité:";
-            this.colQuantity.Name = "colQuantity";
-            // 
-            // colProd
-            // 
-            this.colProd.HeaderText = "Produit";
-            this.colProd.Name = "colProd";
-            // 
-            // colPromo
-            // 
-            this.colPromo.HeaderText = "Promotion:";
-            this.colPromo.Name = "colPromo";
             // 
             // FormDocAjt
             // 
