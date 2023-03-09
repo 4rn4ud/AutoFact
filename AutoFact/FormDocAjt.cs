@@ -69,12 +69,10 @@ namespace AutoFact
             Status thestatus = new Status(datequote.Value, thequote.insert(), Convert.ToInt32(type[0]));
             if (thestatus.insert())
             {
-                MessageBox.Show("status ok");
+
             }
             else
             {
-                MessageBox.Show("status bug");
-
             }
 
 
@@ -93,12 +91,14 @@ namespace AutoFact
                         
                         if (theinvoiceline.insert())
                         {
-                            MessageBox.Show("ligne ok");
+
                         }
                         else
                         {
-                            MessageBox.Show("ligne pa");
+                            
+
                         }
+                        MessageBox.Show("Votre facture est crée");
                     }
 
 
@@ -112,23 +112,39 @@ namespace AutoFact
 
 
         }
-        private void colQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
-            {
-                // Empêche la saisie de caractères autres que des chiffres
-                e.Handled = true;
-            }
-
-        }
+        
         private void datainvoiceline_KeyPress(object sender, KeyPressEventArgs e)
         {
            
+
         }
 
         private void datainvoiceline_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             
+        }
+
+        private void datainvoiceline_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            // Vérifiez si la colonne actuelle est la première ou la troisième colonne
+            if (datainvoiceline.CurrentCell.ColumnIndex == 0 || datainvoiceline.CurrentCell.ColumnIndex == 2)
+            {
+                // Récupérez le contrôle de saisie actuel
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    // Attachez un gestionnaire d'événements à l'événement KeyPress
+                    tb.KeyPress += new KeyPressEventHandler(AllowNumbersOnly);
+                }
+            }
+        }
+        private void AllowNumbersOnly(object sender, KeyPressEventArgs e)
+        {
+            // Vérifiez si la touche saisie est un chiffre ou la touche de suppression
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Empêche la saisie de caractères autres que des chiffres
+            }
         }
     }
 

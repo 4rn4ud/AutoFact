@@ -21,11 +21,19 @@ namespace AutoFact
         private void FormDocSuivis_Load(object sender, EventArgs e)
         {
             ListQuote.DataSource = ManagerStatus.getStatus();
-           
-
+            boxNewStatus.DataSource = ManagerStatus.getStatus();
 
         }
-        public void ListQuote_SelectedIndexChanged(object sender, EventArgs e)
+      
+        
+
+
+        private void boxOldStatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListQuote_SelectedIndexChanged(object sender, EventArgs e)
         {
             string[] thequoteid = ListQuote.SelectedValue.ToString().Split(',');
 
@@ -35,8 +43,8 @@ namespace AutoFact
                 {
                     boxOldStatus.Text = onestatus.getTypeLibel();
                 }
-            }
 
+            }
         }
     }
 }

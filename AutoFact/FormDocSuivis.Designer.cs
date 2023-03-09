@@ -31,7 +31,7 @@
             this.ListQuote = new System.Windows.Forms.ComboBox();
             this.labQuote = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.boxNewStatus = new System.Windows.Forms.ComboBox();
             this.labOldStatus = new System.Windows.Forms.Label();
             this.labNewStatus = new System.Windows.Forms.Label();
             this.butChange = new System.Windows.Forms.Button();
@@ -45,6 +45,7 @@
             this.ListQuote.Name = "ListQuote";
             this.ListQuote.Size = new System.Drawing.Size(121, 21);
             this.ListQuote.TabIndex = 0;
+            this.ListQuote.SelectedIndexChanged += new System.EventHandler(this.ListQuote_SelectedIndexChanged);
             // 
             // labQuote
             // 
@@ -62,13 +63,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // comboBox1
+            // boxNewStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(210, 326);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.boxNewStatus.FormattingEnabled = true;
+            this.boxNewStatus.Location = new System.Drawing.Point(210, 326);
+            this.boxNewStatus.Name = "boxNewStatus";
+            this.boxNewStatus.Size = new System.Drawing.Size(121, 21);
+            this.boxNewStatus.TabIndex = 3;
             // 
             // labOldStatus
             // 
@@ -105,6 +106,7 @@
             this.boxOldStatus.ReadOnly = true;
             this.boxOldStatus.Size = new System.Drawing.Size(121, 20);
             this.boxOldStatus.TabIndex = 14;
+            this.boxOldStatus.TextChanged += new System.EventHandler(this.boxOldStatus_TextChanged);
             // 
             // FormDocSuivis
             // 
@@ -115,7 +117,7 @@
             this.Controls.Add(this.butChange);
             this.Controls.Add(this.labNewStatus);
             this.Controls.Add(this.labOldStatus);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.boxNewStatus);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labQuote);
             this.Controls.Add(this.ListQuote);
@@ -132,7 +134,7 @@
         private System.Windows.Forms.ComboBox ListQuote;
         private System.Windows.Forms.Label labQuote;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox boxNewStatus;
         private System.Windows.Forms.Label labOldStatus;
         private System.Windows.Forms.Label labNewStatus;
         private System.Windows.Forms.Button butChange;
