@@ -52,9 +52,9 @@
             this.labQuote.AutoSize = true;
             this.labQuote.Location = new System.Drawing.Point(124, 213);
             this.labQuote.Name = "labQuote";
-            this.labQuote.Size = new System.Drawing.Size(59, 13);
+            this.labQuote.Size = new System.Drawing.Size(64, 13);
             this.labQuote.TabIndex = 1;
-            this.labQuote.Text = "Document:";
+            this.labQuote.Text = "Documents:";
             // 
             // dateTimePicker1
             // 
