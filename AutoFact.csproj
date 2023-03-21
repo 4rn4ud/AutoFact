@@ -94,6 +94,12 @@
     <Compile Include="FormDocAjt.Designer.cs">
       <DependentUpon>FormDocAjt.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDocListageAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocListageAll.Designer.cs">
+      <DependentUpon>FormDocListageAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDocModif.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocAjt.resx">
       <DependentUpon>FormDocAjt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocListageAll.resx">
+      <DependentUpon>FormDocListageAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocModif.resx">
       <DependentUpon>FormDocModif.cs</DependentUpon>

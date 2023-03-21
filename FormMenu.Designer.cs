@@ -47,6 +47,7 @@ namespace AutoFact
             this.BtnModifProf = new System.Windows.Forms.Button();
             this.BtnInformation = new System.Windows.Forms.Button();
             this.buttFollowQuote = new System.Windows.Forms.Button();
+            this.buttonFacture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,12 +211,23 @@ namespace AutoFact
             this.buttFollowQuote.UseVisualStyleBackColor = true;
             this.buttFollowQuote.Click += new System.EventHandler(this.buttFollowQuote_Click);
             // 
+            // buttonFacture
+            // 
+            this.buttonFacture.Location = new System.Drawing.Point(856, 474);
+            this.buttonFacture.Name = "buttonFacture";
+            this.buttonFacture.Size = new System.Drawing.Size(122, 22);
+            this.buttonFacture.TabIndex = 21;
+            this.buttonFacture.Text = "ButtonFacture";
+            this.buttonFacture.UseVisualStyleBackColor = true;
+            this.buttonFacture.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.buttonFacture);
             this.Controls.Add(this.buttFollowQuote);
             this.Controls.Add(this.BtnInformation);
             this.Controls.Add(this.BtnModifProf);
@@ -235,6 +247,7 @@ namespace AutoFact
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoFact";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,6 +272,7 @@ namespace AutoFact
         private System.Windows.Forms.Button BtnModifProf;
         private System.Windows.Forms.Button BtnInformation;
         private System.Windows.Forms.Button buttFollowQuote;
+        private System.Windows.Forms.Button buttonFacture;
     }
 }
 

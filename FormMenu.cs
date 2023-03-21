@@ -36,7 +36,7 @@ namespace AutoFact
 
         private void BtnModClient_Click(object sender, EventArgs e)
         {
-            FormClientModif ClientModif = new FormClientModif(); 
+            FormClientModif ClientModif = new FormClientModif();
             ClientModif.Show();
         }
 
@@ -106,8 +106,21 @@ namespace AutoFact
 
         private void buttFollowQuote_Click(object sender, EventArgs e)
         {
-            FormDocSuivis docSuivis = new FormDocSuivis();
+            FormDocSuivis docSuivis = new FormDocSuivis();  
             docSuivis.Show();
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormDocListageAll DocListage = new FormDocListageAll();
+            DocListage.Show();
         }
     }
 }
+
+

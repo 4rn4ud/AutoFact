@@ -46,7 +46,6 @@
             this.dataGridQuot.Name = "dataGridQuot";
             this.dataGridQuot.Size = new System.Drawing.Size(589, 150);
             this.dataGridQuot.TabIndex = 1;
-            this.dataGridQuot.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridQuot_CellContentClick);
             // 
             // colidquote
             // 
@@ -71,6 +70,7 @@
             this.Controls.Add(this.dataGridQuot);
             this.Name = "FormDocListageAll";
             this.Text = "FormDocListageAll";
+            this.Load += new System.EventHandler(this.FormDocListageAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuot)).EndInit();
             this.ResumeLayout(false);
 
